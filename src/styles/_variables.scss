@@ -1,0 +1,16 @@
+//colors
+$blue: blue;
+$lightGrey1: #ddd9d9;
+$lightGrey2: #898989;
+
+//paddings
+$paddingMobile: 40px;
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

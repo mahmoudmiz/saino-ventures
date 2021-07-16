@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "GTWalsheimPro";
+  src: local("GTWalsheimPro"),
+    url(../fonts/GTWalsheimPro-Regular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: GTWalsheimPro;
+}

@@ -1,0 +1,117 @@
+@use '../../styles/variables' as *;
+
+header {
+  background-image: url("../../images/header-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: $paddingMobile;
+}
+
+.changeLanguage {
+  background: white;
+  border-radius: 4px;
+  max-width: 311px;
+  height: 40px;
+  &::after {
+    content: url("../../images/chevron-down.svg");
+  }
+}
+
+.headerText {
+  margin-top: 110px;
+  text-transform: uppercase;
+  color: white;
+
+  .headerText__1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    max-width: 100px;
+    animation: fadein 2s;
+  }
+
+  .headerText__2 {
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12vw;
+
+    span {
+      display: block;
+      overflow: hidden;
+      animation: fadein 2s;
+    }
+    span:nth-child(2) {
+      text-indent: 12%;
+    }
+    div {
+      text-align: right;
+      position: relative;
+      animation: fadein 2s;
+
+      .headerText__3 {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 10vw;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 8vw;
+    }
+
+    @media (min-width: 1200px) {
+      line-height: 120px;
+    }
+  }
+  @media (min-width: 768px) {
+    margin-top: 90px;
+    width: 88%;
+    padding: 0 70px;
+  }
+
+  @media (min-width: 992px) {
+    width: 75%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 68%;
+  }
+}
+
+.learnMore {
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: black;
+    transition: ease-in-out 0.5s;
+  }
+  @media (min-width: 768px) {
+    margin: 0 70px;
+  }
+}
