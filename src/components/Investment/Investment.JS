@@ -5,6 +5,51 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 //styles
 import * as styles from "./styles.module.scss";
 
+//assets
+import chevronDown from "../../images/chevron-down-black.svg";
+
+const ListItem = ({ children, title }) => {
+  const [showMore, setShowMore] = React.useState(false);
+  return (
+    <div className={styles.listItem}>
+      <div className={styles.listItemTile}>
+        <h5>{title}</h5>
+        <img
+          src={chevronDown}
+          alt="chevronDown"
+          className={showMore ? styles.active : null}
+          onClick={() => setShowMore((prev) => !prev)}
+        />
+      </div>
+
+      {showMore && <div className={styles.listItemContent}>{children}</div>}
+    </div>
+  );
+};
+
+const listDetails = [
+  {
+    title: "TGE",
+    details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
+  },
+  {
+    title: "VESTING",
+    details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
+  },
+  {
+    title: "DEX",
+    details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
+  },
+  {
+    title: "CEX",
+    details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
+  },
+  {
+    title: "DEX",
+    details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
+  },
+];
+
 // markup
 const Investment = () => {
   return (
@@ -88,6 +133,16 @@ const Investment = () => {
           secteur est haussier. Dans le cas ou le secteur est baissier, ce même
           portfolio ne diminuera que très peu. Risk reward
         </p>
+      </div>
+
+      <div className={styles.investmentList}>
+        {listDetails.map((item, index) => {
+          return (
+            <ListItem key={index} title={item.title}>
+              {item.details}
+            </ListItem>
+          );
+        })}
       </div>
     </section>
   );

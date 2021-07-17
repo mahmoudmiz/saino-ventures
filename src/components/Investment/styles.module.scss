@@ -2,7 +2,7 @@
 
 .investment {
   overflow: hidden;
-  margin-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .investmentBlock {
@@ -49,7 +49,7 @@
   margin-bottom: 2rem;
 }
 .carouselItem {
-  margin: 36px 24px 56px 27px;
+  margin: 36px 24px 18px 27px;
 
   h5 {
     font-size: 20px;
@@ -71,4 +71,52 @@
     }
     margin-bottom: 23px;
   }
+
+  p {
+    font-size: 13px;
+    line-height: 22px;
+    color: $black4;
+  }
+}
+
+.investmentList {
+  padding: $paddingMobile;
+  margin-top: 3rem;
+
+  img {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    transform: none;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .active {
+    transform: scale(-1);
+  }
+}
+
+.listItem {
+  &:nth-of-type(1) {
+    border-top: 2px solid $border1;
+  }
+}
+.listItemTile {
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 2px solid $border1;
+  color: black;
+  font-weight: bold;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listItemContent {
+  position: relative;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: normal;
 }
