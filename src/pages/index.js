@@ -4,6 +4,9 @@ import * as React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Insight from "../components/Insight/Insight";
+import Manifesto from "../components/Manifesto/Manifesto";
+import Investment from "../components/Investment/Investment";
+
 //styles
 import "./index.scss";
 
@@ -13,7 +16,9 @@ const IndexPage = () => {
     <main>
       <Header />
       <Insight />
-      <Footer />
+      <Manifesto />
+      <Investment />
+      {/* <Footer /> */}
     </main>
   );
 };

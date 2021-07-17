@@ -13,3 +13,36 @@
 body {
   font-family: GTWalsheimPro;
 }
+
+// dot styles overrides
+.carousel .control-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  opacity: 1;
+}
+
+// selected dot styles overrides
+.carousel .control-dots .dot.selected {
+  border: 1px solid #000000;
+  background: white;
+}
+
+// investments overrides
+#investment {
+  .carousel-root {
+    position: relative;
+    margin: 0 32px;
+    z-index: 2;
+    background: white;
+    box-shadow: 0px 4px 60px rgb(0 0 0 / 15%);
+  }
+
+  .carousel.carousel-slider {
+    overflow: unset;
+  }
+
+  .control-dots {
+    bottom: -70px;
+  }
+}

@@ -2,13 +2,45 @@
 
 .insightHeader {
   padding: $paddingMobile;
+  padding-top: 47px;
+  margin-bottom: 37px;
   color: $lightGrey2;
   h1 {
     margin-top: 0.5rem;
     color: $lightGrey1;
-    font-weight: 500;
     font-size: 40px;
     line-height: 40px;
     text-transform: uppercase;
+  }
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.carouselItem {
+  text-align: left;
+  padding: $paddingMobile;
+  padding-top: 0;
+  h5 {
+    color: $lightGrey3;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  p {
+    color: black;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 4rem;
   }
 }
