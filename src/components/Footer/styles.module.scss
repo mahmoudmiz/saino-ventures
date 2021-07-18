@@ -1,4 +1,63 @@
+@use '../../styles/variables' as *;
+
 footer {
-  height: 600px;
   background-color: black;
+  padding: $paddingMobile;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 10rem;
+
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+    color: $grey3;
+    margin-bottom: 1rem;
+  }
+}
+
+.footerLogo {
+  width: 95px;
+  height: 101px;
+}
+
+.footerSocials {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  img {
+    margin-right: 1rem;
+  }
+}
+
+.footerTile {
+  color: white;
+  p {
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  margin-bottom: 2rem;
+}
+
+.changeLanguage {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 13px 11px;
+  outline: 0;
+  border: 0;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  width: 100%;
+  max-width: 311px;
 }

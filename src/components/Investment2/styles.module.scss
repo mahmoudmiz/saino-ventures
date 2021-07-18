@@ -1,0 +1,116 @@
+@use '../../styles/variables' as *;
+
+.investment2 {
+  padding: $paddingMobile;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: $black1;
+  margin-bottom: 5rem;
+  color: white;
+}
+
+.investment2Block {
+  h5 {
+    color: $grey3;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+
+  .top {
+    text-align: center;
+    h5 {
+      font-size: 100px;
+      line-height: 124px;
+    }
+    p {
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+  .innerWrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      text-align: center;
+
+      h5 {
+        font-size: 40px;
+        line-height: 49px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// overrides
+.slider {
+  color: $grey5 !important;
+
+  span:first-child {
+    height: 12px;
+    border-radius: 5px;
+  }
+  span:nth-child(2) {
+    height: 12px;
+    border-radius: 5px;
+  }
+
+  span:last-child {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+    color: $grey6;
+  }
+}
+
+.sliderContainer {
+  text-align: center;
+  .sliderRange {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .sliderText {
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 2rem;
+    &::first-line {
+      color: $grey4;
+      font-weight: bold;
+    }
+  }
+}

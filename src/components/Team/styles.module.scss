@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+
+.team {
+  padding: $paddingMobile;
+  padding-bottom: 2rem;
+}
+
+.teamHeader {
+  margin-bottom: 1.5rem;
+  h3 {
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $grey3;
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+    color: $black3;
+  }
+}
+.teamMember {
+  img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  margin-bottom: 2.5rem;
+
+  h3 {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    &::first-line {
+      color: $grey3;
+      font-weight: 400;
+    }
+  }
+}
