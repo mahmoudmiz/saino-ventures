@@ -14,6 +14,7 @@ import * as styles from "./styles.module.scss";
 
 // markup
 const Footer = () => {
+  console.log(isMobile);
   return (
     <footer id="footer" className={styles.footer}>
       <img src={logo} alt="saino ventures logo" className={styles.footerLogo} />
@@ -35,8 +36,8 @@ const Footer = () => {
             <p>DOLOR LOREM IPSUM</p>
           </div>
         </div>
-
-        <div className={styles.footerBlock}>
+        {/* hidden on mobile */}
+        <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
           <h5>Lorem ipsum </h5>
           <div className={styles.footerTile}>
             <p>Lorem ipsum Copy</p>
@@ -46,8 +47,8 @@ const Footer = () => {
             <p>DOLOR LOREM IPSUM</p>
           </div>
         </div>
-
-        <div className={styles.footerBlock}>
+        {/* hidden on mobile */}
+        <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
           <h5>Lorem ipsum </h5>
           <div className={styles.footerTile}>
             <p>Lorem ipsum Copy</p>
@@ -60,7 +61,7 @@ const Footer = () => {
       </div>
 
       <button className={styles.changeLanguage}>
-        <span>{isMobile ? "FR" : "LANGUE : FRANCAIS"}</span>
+        <span>{isMobile ? "LANGUE : FRANCAIS" : "FR"}</span>
         <img src={chevronIcon} alt="chevronIcon" />
       </button>
     </footer>

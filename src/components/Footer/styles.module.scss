@@ -26,7 +26,7 @@ footer {
     }
 
     .changeLanguage {
-      margin-top: 3.5rem;
+      margin-top: 3rem;
       grid-area: lang;
     }
   }
@@ -49,6 +49,12 @@ footer {
   text-align: center;
   img {
     margin-right: 1rem;
+  }
+
+  @media (min-width: $breakpointTablet) {
+    img:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -98,6 +104,13 @@ footer {
   }
 }
 
+.mobileOnly {
+  display: none;
+
+  @media (min-width: $breakpointTablet) {
+    display: block;
+  }
+}
 .footerList {
   @media (min-width: $breakpointTablet) {
     display: flex;
