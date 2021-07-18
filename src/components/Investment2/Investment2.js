@@ -4,16 +4,18 @@ import Slider from "@material-ui/core/Slider";
 //styles
 import * as styles from "./styles.module.scss";
 
+// slider values
+const currentValue = 200000;
+const start = 0;
+const end = 1000000;
+
 // markup
 const Investment2 = () => {
-  const [value, setValue] = React.useState(200000);
+  const [value, setValue] = React.useState(currentValue);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const start = 0;
-  const end = 1000000;
 
   return (
     <section id="investment2" className={styles.investment2}>

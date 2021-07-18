@@ -112,6 +112,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  button {
+    border: none;
+    background: white;
+    outline: 0;
+  }
 }
 
 .listItemContent {

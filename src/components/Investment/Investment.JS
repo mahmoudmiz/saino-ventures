@@ -14,12 +14,13 @@ const ListItem = ({ children, title }) => {
     <div className={styles.listItem}>
       <div className={styles.listItemTile}>
         <h5>{title}</h5>
-        <img
-          src={chevronDown}
-          alt="chevronDown"
-          className={showMore ? styles.active : null}
-          onClick={() => setShowMore((prev) => !prev)}
-        />
+        <button onClick={() => setShowMore((prev) => !prev)}>
+          <img
+            src={chevronDown}
+            alt="chevronDown"
+            className={showMore ? styles.active : null}
+          />
+        </button>
       </div>
 
       {showMore && <div className={styles.listItemContent}>{children}</div>}

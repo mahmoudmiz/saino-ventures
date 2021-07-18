@@ -26,7 +26,11 @@ const Manifesto = () => {
         </p>
         <span className={styles.textbg}>manifesto</span>
       </div>
-      <img src={placeholder} className={styles.manifestoAsset} />
+      <img
+        src={placeholder}
+        className={styles.manifestoAsset}
+        alt="manifestoAsset"
+      />
 
       <div className={styles.manifestoBlock}>
         <h5>Manifesto</h5>

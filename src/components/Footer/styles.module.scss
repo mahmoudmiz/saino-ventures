@@ -6,13 +6,35 @@ footer {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  margin-bottom: 10rem;
 
-  h5 {
-    font-size: 20px;
-    line-height: 24px;
-    color: $grey3;
-    margin-bottom: 1rem;
+  @media (min-width: $breakpointTablet) {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "logo content socials lang";
+
+    .footerSocials {
+      grid-area: socials;
+      margin-top: 4rem;
+    }
+
+    .footerLogo {
+      grid-area: logo;
+    }
+    .footerList {
+      grid-area: content;
+      margin-top: 4rem;
+    }
+
+    .changeLanguage {
+      margin-top: 3.5rem;
+      grid-area: lang;
+    }
+  }
+
+  @media (min-width: $breakpointLarge) {
+    padding: $paddingDesktop;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -30,6 +52,14 @@ footer {
   }
 }
 
+.footerBlock {
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+    color: $grey3;
+    margin-bottom: 1rem;
+  }
+}
 .footerTile {
   color: white;
   p {
@@ -60,4 +90,17 @@ footer {
   letter-spacing: 0.1em;
   width: 100%;
   max-width: 311px;
+  overflow: hidden;
+
+  @media (min-width: $breakpointTablet) {
+    display: flex;
+    max-width: 60px;
+  }
+}
+
+.footerList {
+  @media (min-width: $breakpointTablet) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
