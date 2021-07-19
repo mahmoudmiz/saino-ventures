@@ -13,7 +13,7 @@ import chevronDown from "../../images/chevron-down-black.svg";
 const ListItem = ({ children, title }) => {
   const [showMore, setShowMore] = React.useState(false);
   return (
-    <Collapse in={showMore} collapsedSize={44} timeout={1000}>
+    <Collapse in={showMore} collapsedSize={44}>
       <div className={styles.listItem}>
         <div className={styles.listItemTile}>
           <h5>{title}</h5>
@@ -26,11 +26,9 @@ const ListItem = ({ children, title }) => {
           </button>
         </div>
 
-        {showMore && (
-          <Fade in={showMore}>
-            <div className={styles.listItemContent}>{children}</div>
-          </Fade>
-        )}
+        <Fade in={showMore}>
+          <div className={styles.listItemContent}>{children}</div>
+        </Fade>
       </div>
     </Collapse>
   );
