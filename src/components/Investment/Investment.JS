@@ -3,36 +3,13 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Fade from "@material-ui/core/Fade";
 import Collapse from "@material-ui/core/Collapse";
+import Grow from "@material-ui/core/Grow";
 
 //styles
 import * as styles from "./styles.module.scss";
 
 //assets
 import chevronDown from "../../images/chevron-down-black.svg";
-
-const ListItem = ({ children, title }) => {
-  const [showMore, setShowMore] = React.useState(false);
-  return (
-    <Collapse in={showMore} collapsedSize={44}>
-      <div className={styles.listItem}>
-        <div className={styles.listItemTile}>
-          <h5>{title}</h5>
-          <button onClick={() => setShowMore((prev) => !prev)}>
-            <img
-              src={chevronDown}
-              alt="chevronDown"
-              className={showMore ? styles.active : null}
-            />
-          </button>
-        </div>
-
-        <Fade in={showMore}>
-          <div className={styles.listItemContent}>{children}</div>
-        </Fade>
-      </div>
-    </Collapse>
-  );
-};
 
 // edit the showMore list details from here
 const listDetails = [
@@ -57,6 +34,30 @@ const listDetails = [
     details: `Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.`,
   },
 ];
+
+const ListItem = ({ children, title }) => {
+  const [showMore, setShowMore] = React.useState(false);
+  return (
+    <Collapse in={showMore} collapsedSize={44}>
+      <div className={styles.listItem}>
+        <div className={styles.listItemTile}>
+          <h5>{title}</h5>
+          <button onClick={() => setShowMore((prev) => !prev)}>
+            <img
+              src={chevronDown}
+              alt="chevronDown"
+              className={showMore ? styles.active : null}
+            />
+          </button>
+        </div>
+
+        <Fade in={showMore}>
+          <div className={styles.listItemContent}>{children}</div>
+        </Fade>
+      </div>
+    </Collapse>
+  );
+};
 
 // markup
 const Investment = () => {
@@ -120,52 +121,59 @@ const Investment = () => {
 
       {/*   desktop version*/}
       <div className={styles.cardsContainerDesktop}>
-        <div className={`${styles.carouselItem} ${styles.card}`}>
-          <h5>Seed</h5>
-          <h3>
-            Ipsum dolor <br />
-            LOREM IPSUM DOLOR
-          </h3>
-          <p>
-            Investissement au plus tôt. Une seed permet potentiellement
-            d’obtenir le token au meilleur prix. De plus, ce sont des sales
-            fortement exclusives, elle ne sont souvent accessibles qu’à une très
-            faible minorité de fonds d’investissement. Les retour sur
-            investissement potentiels sont hors catégories. Le risque est par
-            contre beaucoup plus important ainsi que le vesting.
-          </p>
-        </div>
-        <div className={`${styles.carouselItem} ${styles.card}`}>
-          <h5>Private Sale</h5>
-          <h3>
-            Ipsum dolor <br />
-            LOREM IPSUM DOLOR
-          </h3>
-          <p>
-            Investissement au plus tôt. Une seed permet potentiellement
-            d’obtenir le token au meilleur prix. De plus, ce sont des sales
-            fortement exclusives, elle ne sont souvent accessibles qu’à une très
-            faible minorité de fonds d’investissement. Les retour sur
-            investissement potentiels sont hors catégories. Le risque est par
-            contre beaucoup plus important ainsi que le vesting.
-          </p>
-        </div>
-        <div className={`${styles.carouselItem} ${styles.card}`}>
-          <h5>DEX & CEX</h5>
-          <h3>
-            Ipsum dolor <br />
-            LOREM IPSUM DOLOR
-          </h3>
-          <p>
-            Investissement au plus tôt. Une seed permet potentiellement
-            d’obtenir le token au meilleur prix. De plus, ce sont des sales
-            fortement exclusives, elle ne sont souvent accessibles qu’à une très
-            faible minorité de fonds d’investissement. Les retour sur
-            investissement potentiels sont hors catégories. Le risque est par
-            contre beaucoup plus important ainsi que le vesting.
-          </p>
-        </div>
+        <Grow in={true}>
+          <div className={`${styles.carouselItem} ${styles.card}`}>
+            <h5>Seed</h5>
+            <h3>
+              Ipsum dolor <br />
+              LOREM IPSUM DOLOR
+            </h3>
+            <p>
+              Investissement au plus tôt. Une seed permet potentiellement
+              d’obtenir le token au meilleur prix. De plus, ce sont des sales
+              fortement exclusives, elle ne sont souvent accessibles qu’à une
+              très faible minorité de fonds d’investissement. Les retour sur
+              investissement potentiels sont hors catégories. Le risque est par
+              contre beaucoup plus important ainsi que le vesting.
+            </p>
+          </div>
+        </Grow>
+        <Grow in={true} timeout={1200}>
+          <div className={`${styles.carouselItem} ${styles.card}`}>
+            <h5>Private Sale</h5>
+            <h3>
+              Ipsum dolor <br />
+              LOREM IPSUM DOLOR
+            </h3>
+            <p>
+              Investissement au plus tôt. Une seed permet potentiellement
+              d’obtenir le token au meilleur prix. De plus, ce sont des sales
+              fortement exclusives, elle ne sont souvent accessibles qu’à une
+              très faible minorité de fonds d’investissement. Les retour sur
+              investissement potentiels sont hors catégories. Le risque est par
+              contre beaucoup plus important ainsi que le vesting.
+            </p>
+          </div>
+        </Grow>
+        <Grow in={true} timeout={1400}>
+          <div className={`${styles.carouselItem} ${styles.card}`}>
+            <h5>DEX & CEX</h5>
+            <h3>
+              Ipsum dolor <br />
+              LOREM IPSUM DOLOR
+            </h3>
+            <p>
+              Investissement au plus tôt. Une seed permet potentiellement
+              d’obtenir le token au meilleur prix. De plus, ce sont des sales
+              fortement exclusives, elle ne sont souvent accessibles qu’à une
+              très faible minorité de fonds d’investissement. Les retour sur
+              investissement potentiels sont hors catégories. Le risque est par
+              contre beaucoup plus important ainsi que le vesting.
+            </p>
+          </div>
+        </Grow>
       </div>
+
       <div className={styles.investmentBlocksWrapper}>
         <div className={styles.innerWrapper}>
           <div className={styles.investmentBlock}>
