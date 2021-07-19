@@ -7,6 +7,12 @@
   background: $black1;
   margin-bottom: 5rem;
   color: white;
+
+  @media (min-width: $breakpointTablet) {
+    padding: $paddingDesktop;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .investment2Block {
@@ -86,6 +92,8 @@
     overflow: hidden;
     position: relative;
     color: $grey6;
+    margin-top: -5px;
+    margin-left: -5px;
   }
 }
 

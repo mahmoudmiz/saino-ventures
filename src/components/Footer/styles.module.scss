@@ -51,10 +51,8 @@ footer {
     margin-right: 1rem;
   }
 
-  @media (min-width: $breakpointTablet) {
-    img:last-of-type {
-      margin-right: 0;
-    }
+  img:last-of-type {
+    margin-right: 0;
   }
 }
 
@@ -96,7 +94,9 @@ footer {
   letter-spacing: 0.1em;
   width: 100%;
   max-width: 311px;
+  min-width: 60px;
   overflow: hidden;
+  cursor: pointer;
 
   @media (min-width: $breakpointTablet) {
     display: flex;

@@ -14,7 +14,7 @@ const Insight = () => {
         <h1>our insight</h1>
       </div>
 
-      <Carousel autoPlay>
+      <Carousel selectedItem={0} showThumbs={false}>
         <div className={styles.carouselItem}>
           <h5>Insight 01</h5>
           <h3>Lorem ipsum dolor</h3>

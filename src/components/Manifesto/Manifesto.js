@@ -47,7 +47,7 @@ const Manifesto = () => {
       </div>
 
       <div className={styles.container}>
-        <Carousel autoPlay>
+        <Carousel selectedItem={0} showThumbs={false}>
           <div className={styles.carouselItem}>
             <h3>DLT</h3>
             <p>

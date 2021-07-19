@@ -5,7 +5,8 @@ import Slider from "@material-ui/core/Slider";
 import * as styles from "./styles.module.scss";
 
 // slider values
-const currentValue = 200000;
+const currentValue = 200000; //change the current value here
+
 const start = 0;
 const end = 1000000;
 
@@ -47,6 +48,7 @@ const Investment2 = () => {
         </div>
 
         <Slider
+          disabled
           min={start}
           max={end}
           value={value}
