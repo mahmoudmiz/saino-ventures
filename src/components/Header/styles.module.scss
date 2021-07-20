@@ -14,6 +14,139 @@ header {
   }
 }
 
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.navMenu {
+  z-index: 1500;
+  display: none;
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: white;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100vw;
+}
+
+.navList {
+  // transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: white;
+    font-size: 30px;
+    line-height: 90px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:active,
+    :hover {
+      background-position: 100%;
+      color: #345ca1;
+      transform: translateX(1rem);
+    }
+  }
+}
+
+.toggleInput {
+  display: none;
+}
+
+.navBg {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: black;
+  vertical-align: middle;
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.toggleInput:checked ~ .navBg {
+  transform: scale(150);
+}
+
+.toggleInput:checked ~ .navMenu {
+  display: block;
+}
+
+.toggleInput:checked + .navButton .navIcon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.toggleInput:checked + .navButton .navIcon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.toggleInput:checked + .navButton .navIcon {
+  background-color: transparent;
+}
+
+.navButton {
+  background-color: #fff;
+  height: 4.1rem;
+  width: 4.1rem;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover .navIcon::before {
+    top: -0.5rem;
+  }
+
+  &:hover .navIcon::after {
+    top: 0.5rem;
+  }
+}
+
+.logo {
+  z-index: 2500;
+}
+.navIcon {
+  width: 32px;
+  height: 2px;
+  background-color: $black3;
+  transition: all 0.2s;
+  display: inline-block;
+  position: relative;
+  top: 18px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background-color: $black3;
+    display: inline-block;
+    transition: all 0.2s;
+    right: 0;
+    font-size: normal;
+    font-family: GTWalsheimPro;
+  }
+
+  &::before {
+    top: -7px;
+  }
+  &::after {
+    top: 9px;
+  }
+}
+
 .changeLanguage {
   background: white;
   border-radius: 4px;
@@ -99,7 +232,7 @@ header {
 
 .learnMore {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   cursor: pointer;
   border-radius: 50%;
   color: white;

@@ -12,6 +12,7 @@
 
 body {
   font-family: GTWalsheimPro;
+  overflow-x: hidden;
 }
 
 // dot styles overrides
@@ -47,6 +48,7 @@ body {
   }
 }
 
+// hide the count of the slides for all sliders
 .carousel .carousel-status {
   display: none;
 }

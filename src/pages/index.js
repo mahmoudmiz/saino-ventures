@@ -18,7 +18,7 @@ const IndexPage = () => {
     <main>
       <Header />
       <Insight />
-      <Manifesto />
+      {/* <Manifesto /> */}
       <Investment />
       <Investment2 />
       <Team />

@@ -1,7 +1,13 @@
 @use '../../styles/variables' as *;
 
-.insightHeader {
+.insight {
   padding: $paddingMobile;
+  background: $white3;
+  @media (min-width: $breakpointTablet) {
+    padding: $paddingDesktop;
+  }
+}
+.insightHeader {
   padding-top: 47px;
   margin-bottom: 37px;
   color: $grey2;
@@ -20,8 +26,7 @@
 
 .carouselItem {
   text-align: left;
-  padding: $paddingMobile;
-  padding-top: 0;
+
   h5 {
     color: $grey3;
     font-size: 11px;
@@ -42,5 +47,20 @@
     font-size: 13px;
     line-height: 22px;
     margin-bottom: 4rem;
+  }
+}
+
+.cardsList {
+  display: none;
+
+  @media (min-width: $breakpointTablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.carouselWrapper {
+  @media (min-width: $breakpointTablet) {
+    display: none;
   }
 }

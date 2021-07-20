@@ -68,7 +68,7 @@ const Investment = () => {
         <h3>Lorem ipsum dolor sit amet consectetur adipis elit.</h3>
       </div>
 
-      {/*   mobile version*/}
+      {/*   mobile */}
       <div className={styles.carouselContainer}>
         <Carousel selectedItem={0} showThumbs={false}>
           <div className={styles.carouselItem}>
@@ -119,7 +119,7 @@ const Investment = () => {
         </Carousel>
       </div>
 
-      {/*   desktop version*/}
+      {/*   desktop */}
       <div className={styles.cardsContainerDesktop}>
         <Grow in={true}>
           <div className={`${styles.carouselItem} ${styles.card}`}>
