@@ -1,5 +1,6 @@
 import * as React from "react";
 import Slider from "@material-ui/core/Slider";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 //styles
 import * as styles from "./styles.module.scss";
@@ -21,22 +22,32 @@ const Investment2 = () => {
   return (
     <section id="investment2" className={styles.investment2}>
       <div className={styles.investment2Block}>
-        <h5>Types d’investissements</h5>
-        <h3>Lorem ipsum dolor sit amet consectetur adipis elit.</h3>
+        <h5>
+          <Trans>Types d’investissements</Trans>
+        </h5>
+        <h3>
+          <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
+        </h3>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.top}>
           <h5>20</h5>
-          <p>place early investor restantes</p>
+          <p>
+            <Trans>place early investor restantes</Trans>
+          </p>
         </div>
         <div className={styles.innerWrapper}>
           <div>
             <h5>88K $</h5>
-            <p>montant investit actuel</p>
+            <p>
+              <Trans>montant investit actuel</Trans>
+            </p>
           </div>
           <div>
             <h5>100K $</h5>
-            <p>Investissement min actuel</p>
+            <p>
+              <Trans>Investissement min actuel</Trans>
+            </p>
           </div>
         </div>
       </div>
@@ -56,8 +67,8 @@ const Investment2 = () => {
           className={styles.slider}
         />
         <span className={styles.sliderText}>
-          objectif <br />
-          phase 1
+          <Trans>objectif</Trans> <br />
+          <Trans>phase</Trans> 1
         </span>
       </div>
     </section>

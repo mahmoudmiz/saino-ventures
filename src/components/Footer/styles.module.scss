@@ -77,33 +77,6 @@ footer {
   margin-bottom: 2rem;
 }
 
-.changeLanguage {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  color: black;
-  border-radius: 4px;
-  padding: 13px 11px;
-  outline: 0;
-  border: 0;
-  margin: 0 auto;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  width: 100%;
-  max-width: 311px;
-  min-width: 60px;
-  overflow: hidden;
-  cursor: pointer;
-
-  @media (min-width: $breakpointTablet) {
-    display: flex;
-    max-width: 60px;
-  }
-}
-
 .mobileOnly {
   display: none;
 
@@ -115,5 +88,12 @@ footer {
   @media (min-width: $breakpointTablet) {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+.languageDropdown {
+  & > div:first-of-type {
+    margin: 3.5rem auto;
+    padding: 0;
   }
 }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import Grow from "@material-ui/core/Grow";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 //assets
 import placeholder from "../../images/placeholder.png";
@@ -12,8 +13,12 @@ const Team = () => {
   return (
     <section id="team" className={styles.team}>
       <div className={styles.teamHeader}>
-        <h3>TEAM</h3>
-        <h5>Lorem ipsum dolor sit amet consectetur adipis elit.</h5>
+        <h3>
+          <Trans>TEAM</Trans>
+        </h3>
+        <h5>
+          <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
+        </h5>
       </div>
 
       <div className={styles.membersList}>
@@ -21,8 +26,8 @@ const Team = () => {
           <div className={styles.teamMember}>
             <img src={placeholder} alt="team member" />
             <h3>
-              Lorem ipsum <br />
-              LOREM IPSUM DOLOR Copy
+              <Trans>Lorem ipsum</Trans> <br />
+              <Trans>LOREM IPSUM DOLOR</Trans>
             </h3>
           </div>
         </Grow>
@@ -30,8 +35,8 @@ const Team = () => {
           <div className={styles.teamMember}>
             <img src={placeholder} alt="team member" />
             <h3>
-              Lorem ipsum <br />
-              LOREM IPSUM DOLOR Copy
+              <Trans>Lorem ipsum</Trans> <br />
+              <Trans>LOREM IPSUM DOLOR</Trans>
             </h3>
           </div>
         </Grow>
@@ -39,8 +44,8 @@ const Team = () => {
           <div className={styles.teamMember}>
             <img src={placeholder} alt="team member" />
             <h3>
-              Lorem ipsum <br />
-              LOREM IPSUM DOLOR Copy
+              <Trans>Lorem ipsum</Trans> <br />
+              <Trans>LOREM IPSUM DOLOR</Trans>
             </h3>
           </div>
         </Grow>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { isMobile } from "react-device-detect";
 
 //components
 import logo from "../../images/logo.svg";
@@ -7,14 +6,13 @@ import facebookIcon from "../../images/facebookIcon.svg";
 import twitterIcon from "../../images/twitterIcon.svg";
 import instgramIcon from "../../images/instgramIcon.svg";
 import linkedIcon from "../../images/linkedIn.svg";
-import chevronIcon from "../../images/chevron-down-black.svg";
+import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 
 //styles
 import * as styles from "./styles.module.scss";
 
 // markup
 const Footer = () => {
-  console.log(isMobile);
   return (
     <footer id="footer" className={styles.footer}>
       <img src={logo} alt="saino ventures logo" className={styles.footerLogo} />
@@ -59,11 +57,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      <button className={styles.changeLanguage}>
-        <span>{isMobile ? "LANGUE : FRANCAIS" : "FR"}</span>
-        <img src={chevronIcon} alt="chevronIcon" />
-      </button>
+      <div className={styles.languageDropdown}>
+        <LanguageDropdown />
+      </div>
     </footer>
   );
 };
