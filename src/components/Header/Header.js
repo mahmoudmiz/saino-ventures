@@ -80,11 +80,12 @@ const Header = () => {
           </div>
         </div>
       </div> */}
-      <Link to="#investment">
-        <div className={styles.learnMore}>
+      <div className={styles.learnMore}>
+        <Link to="#investment">
           <img src={chevronDown} alt="learn More" />
-        </div>
-      </Link>
+        </Link>
+        <span>En savoir plus</span>
+      </div>
     </header>
   );
 };

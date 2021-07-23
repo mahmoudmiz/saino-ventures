@@ -4,6 +4,26 @@
   overflow: hidden;
   padding-bottom: 3rem;
   padding-top: 50px;
+  position: relative;
+
+  &::after {
+    content: "investisseme";
+    position: absolute;
+    text-transform: uppercase;
+    top: 180px;
+    left: 15px;
+    font-size: 100px;
+    line-height: 90px;
+    color: $white4;
+    z-index: -1;
+
+    @media (min-width: $breakpointTablet) {
+      font-size: 200px;
+      right: -230px;
+      left: unset;
+      top: 250px;
+    }
+  }
   @media (min-width: $breakpointTablet) {
     padding: $paddingDesktop;
     padding-bottom: 4rem;

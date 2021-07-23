@@ -87,6 +87,10 @@ nav {
   img {
     margin-right: 1rem;
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.4);
+    }
     &:last-of-type {
       margin-right: 0;
     }
@@ -98,19 +102,19 @@ nav {
 }
 
 .navBg {
-  height: 4rem;
-  width: 4rem;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 8px;
+  right: 8px;
   background-color: black;
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .toggleInput:checked ~ .navBg {
-  transform: scale(150);
+  transform: scale(230);
 }
 
 .toggleInput:checked ~ .navMenu {
@@ -133,8 +137,8 @@ nav {
 
 .navButton {
   background-color: #fff;
-  height: 4.1rem;
-  width: 4.1rem;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
   position: relative;
   display: inline-block;
@@ -144,11 +148,11 @@ nav {
   cursor: pointer;
 
   &:hover .navIcon::before {
-    top: -0.5rem;
+    top: -10px;
   }
 
   &:hover .navIcon::after {
-    top: 0.5rem;
+    top: 10px;
   }
 }
 
@@ -156,18 +160,18 @@ nav {
   z-index: 2500;
 }
 .navIcon {
-  width: 32px;
+  width: 30px;
   height: 2px;
   background-color: $black3;
   transition: all 0.2s;
   display: inline-block;
   position: relative;
-  top: 18px;
+  top: 13px;
   &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
+    width: 30px;
     height: 2px;
     background-color: $black3;
     display: inline-block;
@@ -178,10 +182,10 @@ nav {
   }
 
   &::before {
-    top: -7px;
+    top: -8px;
   }
   &::after {
-    top: 9px;
+    top: 8px;
   }
 }
 
@@ -259,22 +263,35 @@ nav {
 // }
 
 .learnMore {
+  display: flex;
   position: absolute;
   bottom: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  color: white;
-  width: 32px;
-  height: 32px;
-  border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover {
-    background: black;
-    transition: ease-in-out 0.5s;
+
+  a {
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1s infinite alternate;
+
+    &:hover {
+      background: black;
+    }
   }
-  @media (min-width: 768px) {
+  span {
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 1rem;
+  }
+  @media (min-width: $breakpointTablet) {
     margin: 0 70px;
   }
 }
