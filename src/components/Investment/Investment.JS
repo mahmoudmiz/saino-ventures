@@ -68,7 +68,12 @@ const ListItem = ({ children, title }) => {
 const Investment = () => {
   return (
     <section id="investment" className={styles.investment}>
-      <div className={styles.investmentBlock}>
+      <div
+        className={styles.investmentBlock}
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <h5>
           <Trans>Types d’investissements</Trans>
         </h5>
