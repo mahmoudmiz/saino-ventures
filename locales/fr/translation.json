@@ -5,8 +5,9 @@
     "our insight": "our insight",
     "Insight 01": "Insight 01",
     "Lorem ipsum dolor": "Lorem ipsum dolor",
+    "Lorem ipsum": "Lorem ipsum",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    "Types d’investissement": "Types d’investissement",
+    "Types d’investissements": "Types d’investissements",
     "Lorem ipsum dolor sit amet consectetur adipis elit.": "Lorem ipsum dolor sit amet consectetur adipis elit.",
     "Seed": "Seed",
     "Ipsum dolor": "Ipsum dolor",
@@ -20,5 +21,11 @@
     "VESTING": "VESTING",
     "DEX": "DEX",
     "CEX": "CEX",
-    "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.": "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix."
+    "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.": "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.",
+    "place early investor restantes": "place early investor restantes",
+    "montant investit actuel": "montant investit actuel",
+    "Investissement min actuel": "Investissement min actuel",
+    "objectif": "objectif",
+    "phase": "phase",
+    "TEAM": "TEAM"
 }

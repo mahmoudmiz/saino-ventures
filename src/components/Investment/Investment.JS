@@ -214,7 +214,7 @@ const Investment = () => {
               <Trans>Types d’investissements</Trans>
             </h5>
             <h3>
-              <Trans>LOREM IPSUM DOLOR</Trans>
+              <Trans>Lorem ipsum dolor</Trans>
             </h3>
             <p>
               <Trans>
@@ -231,7 +231,7 @@ const Investment = () => {
               <Trans>Types d’investissements</Trans>
             </h5>
             <h3>
-              <Trans>LOREM IPSUM DOLOR</Trans>
+              <Trans>Lorem ipsum dolor</Trans>
             </h3>
             <p>
               <Trans>
