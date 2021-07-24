@@ -21,55 +21,57 @@ const Investment2 = () => {
 
   return (
     <section id="investment2" className={styles.investment2}>
-      <div className={styles.investment2Block}>
-        <h5>
-          <Trans>Types d’investissements</Trans>
-        </h5>
-        <h3>
-          <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
-        </h3>
-      </div>
-      <div className={styles.wrapper}>
-        <div className={styles.top}>
-          <h5>20</h5>
-          <p>
-            <Trans>place early investor restantes</Trans>
-          </p>
+      <div className={styles.mainInnerWrapper}>
+        <div className={styles.investment2Block}>
+          <h5>
+            <Trans>Types d’investissements</Trans>
+          </h5>
+          <h3>
+            <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
+          </h3>
         </div>
-        <div className={styles.innerWrapper}>
-          <div>
-            <h5>88K $</h5>
+        <div className={styles.wrapper}>
+          <div className={styles.top}>
+            <h5>20</h5>
             <p>
-              <Trans>montant investit actuel</Trans>
+              <Trans>place early investor restantes</Trans>
             </p>
           </div>
-          <div>
-            <h5>100K $</h5>
-            <p>
-              <Trans>Investissement min actuel</Trans>
-            </p>
+          <div className={styles.innerWrapper}>
+            <div>
+              <h5>88K $</h5>
+              <p>
+                <Trans>montant investit actuel</Trans>
+              </p>
+            </div>
+            <div>
+              <h5>100K $</h5>
+              <p>
+                <Trans>Investissement min actuel</Trans>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.sliderContainer}>
-        <div className={styles.sliderRange}>
-          <span>0</span>
-          <span>{value === end ? "1M $" : `${value / 1000}k $`}</span>
-          <span>1M $</span>
-        </div>
+        <div className={styles.sliderContainer}>
+          <div className={styles.sliderRange}>
+            <span>0</span>
+            <span>{value === end ? "1M $" : `${value / 1000}k $`}</span>
+            <span>1M $</span>
+          </div>
 
-        <Slider
-          disabled
-          min={start}
-          max={end}
-          value={value}
-          onChange={handleChange}
-          className={styles.slider}
-        />
-        <span className={styles.sliderText}>
-          <Trans>objectif</Trans> <br />
-          <Trans>phase</Trans> 1
-        </span>
+          <Slider
+            disabled
+            min={start}
+            max={end}
+            value={value}
+            onChange={handleChange}
+            className={styles.slider}
+          />
+          <span className={styles.sliderText}>
+            <Trans>objectif</Trans> <br />
+            <Trans>phase</Trans> 1
+          </span>
+        </div>
       </div>
     </section>
   );

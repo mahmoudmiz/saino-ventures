@@ -25,9 +25,18 @@
     }
   }
   @media (min-width: $breakpointTablet) {
-    padding: $paddingDesktop;
     padding-bottom: 4rem;
     padding-top: 100px;
+  }
+}
+
+.mainInnerWrapper {
+  max-width: $maxwidth;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
   }
 }
 
@@ -39,10 +48,8 @@
 }
 
 .investmentBlock {
-  padding: $paddingMobile;
   text-align: left;
   @media (min-width: $breakpointTablet) {
-    padding: 0;
     max-width: 439px;
   }
 
@@ -89,7 +96,6 @@
 .carouselContainer {
   margin-bottom: 6rem;
   margin-top: 87px;
-
   @media (min-width: $breakpointTablet) {
     display: none;
   }
@@ -101,6 +107,7 @@
   .card {
     border-right: 1px solid $border1;
     padding: 60px 55px;
+    width: 376px;
 
     &:nth-of-type(3) {
       border-right: 0;
@@ -117,7 +124,6 @@
 
   @media (min-width: $breakpointTablet) {
     display: flex;
-    justify-content: space-between;
     background: #ffffff;
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
     margin-top: 87px;
@@ -175,7 +181,6 @@
 }
 
 .investmentList {
-  padding: $paddingMobile;
   margin-top: 75px;
 
   img {
@@ -190,7 +195,6 @@
   }
 
   @media (min-width: $breakpointTablet) {
-    padding: 0;
     width: 100%;
     max-width: 438px;
     margin-top: 0rem;

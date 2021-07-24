@@ -5,11 +5,19 @@
   overflow: hidden;
 }
 
+.innerWrapper {
+  max-width: $maxwidth;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+  }
+}
 .manifestoBlock {
   text-align: left;
   position: relative;
   z-index: 1;
-  padding: $paddingMobile;
   padding-top: 47px;
   h5 {
     color: $grey3;
@@ -48,7 +56,6 @@
 }
 
 .manifestoAsset {
-  padding: $paddingMobile;
   margin-top: 80px;
   width: 100%;
   height: 100%;
@@ -57,7 +64,6 @@
 .carouselItem {
   text-align: left;
   color: white;
-  padding: $paddingMobile;
   padding-top: 0;
 
   h3 {

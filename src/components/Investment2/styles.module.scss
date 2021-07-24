@@ -1,17 +1,25 @@
 @use '../../styles/variables' as *;
 
 .investment2 {
-  padding: $paddingMobile;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: $black1;
-  margin-bottom: 5rem;
   color: white;
+  margin-bottom: 5rem;
 
   @media (min-width: $breakpointTablet) {
-    padding: $paddingDesktop;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+}
+
+.mainInnerWrapper {
+  max-width: $maxwidth;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
   }
 }
 

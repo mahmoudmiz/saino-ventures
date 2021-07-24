@@ -1,11 +1,9 @@
 @use '../../styles/variables' as *;
 
 .team {
-  padding: $paddingMobile;
   padding-bottom: 2rem;
 
   @media (min-width: $breakpointTablet) {
-    padding: $paddingDesktop;
     position: relative;
     margin-bottom: 5rem;
     z-index: 3;
@@ -21,6 +19,16 @@
       right: 50px;
       z-index: -1;
     }
+  }
+}
+
+.innerWrapper {
+  max-width: $maxwidth;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
   }
 }
 

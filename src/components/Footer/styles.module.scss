@@ -2,12 +2,23 @@
 
 footer {
   background-color: black;
-  padding: $paddingMobile;
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
 
+  @media (min-width: $breakpointLarge) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.innerWrapper {
+  max-width: $maxwidth;
+  padding: 0 2rem;
+  margin: 0 auto;
+
   @media (min-width: $breakpointTablet) {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "logo content socials lang";
@@ -29,12 +40,6 @@ footer {
       margin-top: 3rem;
       grid-area: lang;
     }
-  }
-
-  @media (min-width: $breakpointLarge) {
-    padding: $paddingDesktop;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 }
 
