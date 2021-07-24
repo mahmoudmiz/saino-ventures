@@ -41,17 +41,19 @@ const ListItem = ({ children, title }) => {
   return (
     <Collapse in={showMore} collapsedSize={44}>
       <div className={styles.listItem}>
-        <div className={styles.listItemTile}>
+        <div
+          className={styles.listItemTile}
+          onClick={() => setShowMore((prev) => !prev)}
+        >
           <h5>
             <Trans>{title}</Trans>
           </h5>
-          <button onClick={() => setShowMore((prev) => !prev)}>
-            <img
-              src={chevronDown}
-              alt="chevronDown"
-              className={showMore ? styles.active : null}
-            />
-          </button>
+
+          <img
+            src={chevronDown}
+            alt="chevronDown"
+            className={showMore ? styles.active : null}
+          />
         </div>
 
         <Fade in={showMore}>

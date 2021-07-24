@@ -2,6 +2,7 @@
 
 .investment {
   overflow: hidden;
+  padding: 0 2rem;
   padding-bottom: 3rem;
   padding-top: 50px;
   position: relative;
@@ -32,7 +33,6 @@
 
 .mainInnerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
@@ -188,14 +188,13 @@
     height: 14px;
     cursor: pointer;
     transform: none;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.5s ease-in-out;
   }
   .active {
     transform: scale(-1);
   }
 
   @media (min-width: $breakpointTablet) {
-    width: 100%;
     max-width: 438px;
     margin-top: 0rem;
     margin-left: 2rem;
@@ -214,17 +213,11 @@
   justify-content: space-between;
   align-items: center;
   border-top: 2px solid $border1;
-
-  button {
-    border: none;
-    background: white;
-    outline: 0;
-  }
+  cursor: pointer;
 }
 
 .listItemContent {
   position: relative;
   padding: 20px;
   font-size: 14px;
-  background: $white1;
 }

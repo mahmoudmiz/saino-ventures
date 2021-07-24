@@ -3,8 +3,8 @@
 footer {
   background-color: black;
   text-align: center;
+  padding: 0 2rem;
   padding-top: 3rem;
-  padding-bottom: 3rem;
 
   @media (min-width: $breakpointLarge) {
     padding-top: 3rem;
@@ -14,7 +14,6 @@ footer {
 
 .innerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {

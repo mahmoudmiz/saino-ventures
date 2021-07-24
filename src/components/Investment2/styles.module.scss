@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .investment2 {
+  padding: 0 2rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: $black1;
@@ -15,7 +16,7 @@
 
 .mainInnerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
+
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
@@ -47,8 +48,8 @@
   .top {
     text-align: center;
     h5 {
-      font-size: 100px;
-      line-height: 124px;
+      font-size: 140px;
+      line-height: 173px;
     }
     p {
       font-size: 11px;

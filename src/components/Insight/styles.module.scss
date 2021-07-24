@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .insight {
+  padding: 0 2rem;
   padding-top: 46px;
   padding-bottom: 50px;
   background: $white3;
@@ -11,7 +12,6 @@
 }
 .innerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
@@ -98,7 +98,8 @@
     display: flex;
     justify-content: space-between;
     & > div {
-      max-width: 325px;
+      width: 325px;
+      margin-right: 1rem;
     }
   }
 }

@@ -7,6 +7,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
+  padding: 0 2rem;
   padding-top: 2rem;
   @media (min-width: 768px) {
     background-image: url("../../images/header-bg.png");
@@ -15,7 +16,6 @@ header {
 
 .innerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {

@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .team {
+  padding: 0 2rem;
   padding-bottom: 2rem;
 
   @media (min-width: $breakpointTablet) {
@@ -24,7 +25,6 @@
 
 .innerWrapper {
   max-width: $maxwidth;
-  padding: 0 2rem;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
