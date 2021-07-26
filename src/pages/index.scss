@@ -9,6 +9,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html:focus-within {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: GTWalsheimPro;
