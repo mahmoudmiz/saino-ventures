@@ -26,21 +26,51 @@ const Header = () => {
     <header>
       <div className={styles.innerWrapper}>
         <nav>
-          <img src={logo} alt="saino ventures logo" className={styles.logo} />
-          <input
-            type="checkbox"
-            id="navToggle"
-            className={styles.toggleInput}
-            ref={inputRef}
-          />
-          <label htmlFor="navToggle" className={styles.navButton}>
-            <span className={styles.navIcon} />
-          </label>
+          <div className={styles.mobileNavMenu}>
+            <img src={logo} alt="saino ventures logo" className={styles.logo} />
+            <input
+              type="checkbox"
+              id="navToggle"
+              className={styles.toggleInput}
+              ref={inputRef}
+            />
+            <label htmlFor="navToggle" className={styles.navButton}>
+              <span className={styles.navIcon} />
+            </label>
 
-          <div className={styles.navBg} />
+            <div className={styles.navBg} />
 
-          <div className={styles.navMenu}>
-            <div className={styles.navList}>
+            <div className={styles.navMenu}>
+              <div className={styles.navList}>
+                <Link onClick={handleCloseMenu} to="#manifesto">
+                  Manifesto
+                </Link>
+                <Link onClick={handleCloseMenu} to="#investment">
+                  Investissements
+                </Link>
+                <Link onClick={handleCloseMenu} to="#investment2">
+                  rising fund
+                </Link>
+                <Link onClick={handleCloseMenu} to="#team">
+                  team
+                </Link>
+                <div className={styles.footerSocials}>
+                  <img src={facebookIcon} alt="facebook" />
+                  <img src={twitterIcon} alt="twitter" />
+                  <img src={instgramIcon} alt="instgram" />
+                  <img src={linkedIcon} alt="linkedin" />
+                </div>
+                <div className={styles.changeLanguage}>
+                  <LanguageDropdown />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.desktopNavMenu}>
+            <img src={logo} alt="saino ventures logo" className={styles.logo} />
+
+            <div className={styles.navMenu}>
               <Link onClick={handleCloseMenu} to="#manifesto">
                 Manifesto
               </Link>
@@ -53,34 +83,11 @@ const Header = () => {
               <Link onClick={handleCloseMenu} to="#team">
                 team
               </Link>
-              <div className={styles.footerSocials}>
-                <img src={facebookIcon} alt="facebook" />
-                <img src={twitterIcon} alt="twitter" />
-                <img src={instgramIcon} alt="instgram" />
-                <img src={linkedIcon} alt="linkedin" />
-              </div>
-
               <LanguageDropdown />
             </div>
           </div>
         </nav>
-        {/* <div className={styles.headerText}>
-        <span className={styles.headerText__1}>Fondé en 2020 Dubai - UAE</span>
-        <div className={styles.headerText__2}>
-          <span>Capital</span>
-          <span>for</span>
-          <div>
-            Growth
-            <span className={styles.headerText__3}>
-              LOREM IPSUM <br />
-              <strong>
-                Distributed Ledger <br />
-              </strong>
-              Technologie
-            </span>
-          </div>
-        </div>
-      </div> */}
+
         <div className={styles.learnMore}>
           <Link to="#investment">
             <img src={chevronDown} alt="learn More" />

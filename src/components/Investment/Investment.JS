@@ -52,7 +52,7 @@ const ListItem = ({ children, title }) => {
           <img
             src={chevronDown}
             alt="chevronDown"
-            className={showMore ? styles.active : null}
+            className={showMore ? styles.active : ""}
           />
         </div>
 

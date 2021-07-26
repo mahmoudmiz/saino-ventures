@@ -24,6 +24,7 @@
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
+  font-weight: 600;
 
   h1 {
     margin-top: 0.5rem;
@@ -31,6 +32,7 @@
     font-size: 40px;
     line-height: 40px;
     text-transform: uppercase;
+    font-weight: 600;
   }
 
   @media (min-width: $breakpointTablet) {
@@ -52,8 +54,10 @@
     line-height: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-weight: 500;
   }
   h3 {
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 10px;
@@ -100,6 +104,9 @@
     & > div {
       width: 325px;
       margin-right: 1rem;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }

@@ -53,30 +53,44 @@ footer {
   text-align: center;
   img {
     margin-right: 1rem;
-  }
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.3);
+    }
 
-  img:last-of-type {
-    margin-right: 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
 .footerBlock {
   h5 {
+    font-weight: normal;
     font-size: 20px;
     line-height: 24px;
     color: $grey3;
     margin-bottom: 1rem;
+
+    @media (min-width: $breakpointTablet) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 .footerTile {
   color: white;
   p {
+    font-weight: bold;
     font-size: 12px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: bold;
+
+    @media (min-width: $breakpointTablet) {
+      line-height: 16px;
+    }
   }
   margin-bottom: 2rem;
 }
@@ -96,8 +110,9 @@ footer {
 }
 
 .languageDropdown {
-  & > div:first-of-type {
-    margin: 3.5rem auto;
-    padding: 0;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+  div > div > div > div {
+    margin: 0 auto;
   }
 }

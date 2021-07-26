@@ -16,7 +16,6 @@
 
 .mainInnerWrapper {
   max-width: $maxwidth;
-
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
@@ -32,11 +31,13 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    font-weight: 500;
   }
   h3 {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -48,14 +49,27 @@
   .top {
     text-align: center;
     h5 {
-      font-size: 140px;
-      line-height: 173px;
+      font-size: 100px;
+      line-height: 124px;
+      font-weight: normal;
     }
     p {
       font-size: 11px;
       line-height: 16px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    @media (min-width: $breakpointTablet) {
+      h5 {
+        font-size: 140px;
+        line-height: 173px;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
   }
   .innerWrapper {
@@ -70,13 +84,26 @@
       h5 {
         font-size: 40px;
         line-height: 49px;
-        font-weight: 400;
+        font-weight: normal;
       }
       p {
         font-size: 11px;
         line-height: 14px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      @media (min-width: $breakpointTablet) {
+        h5 {
+          font-size: 72px;
+          line-height: 89px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
     }
   }
@@ -119,6 +146,7 @@
   }
 
   .sliderText {
+    font-weight: 500;
     font-size: 11px;
     line-height: 12px;
     letter-spacing: 0.1em;
@@ -127,7 +155,7 @@
     margin-top: 2rem;
     &::first-line {
       color: $grey4;
-      font-weight: bold;
+      font-weight: 700;
     }
   }
 }
