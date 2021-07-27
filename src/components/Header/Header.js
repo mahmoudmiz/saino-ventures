@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link } from "react-scroll";
 
 //components
 import logo from "../../images/logo.svg";
@@ -22,10 +22,25 @@ const Header = () => {
     inputRef.current.checked = false;
   };
 
+  const [scrollNav, setScrollNav] = React.useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 50) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+
+    return () => window.removeEventListener("scroll", changeNav);
+  }, []);
+
   return (
     <header>
       <div className={styles.innerWrapper}>
-        <nav>
+        <nav className={scrollNav ? styles.scrollActive : ""}>
           <div className={styles.mobileNavMenu}>
             <img src={logo} alt="saino ventures logo" className={styles.logo} />
             <input
@@ -42,16 +57,47 @@ const Header = () => {
 
             <div className={styles.navMenu}>
               <div className={styles.navList}>
-                <Link onClick={handleCloseMenu} to="#manifesto">
+                <Link
+                  activeClass="active"
+                  onClick={handleCloseMenu}
+                  to="manifesto"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  exact="true"
+                  offset={-140}
+                >
                   Manifesto
                 </Link>
-                <Link onClick={handleCloseMenu} to="#investment">
+                <Link
+                  activeClass="active"
+                  onClick={handleCloseMenu}
+                  to="investment"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  exact="true"
+                  offset={-140}
+                >
                   Investissements
                 </Link>
-                <Link onClick={handleCloseMenu} to="#investment2">
+                <Link
+                  activeClass="active"
+                  onClick={handleCloseMenu}
+                  to="investment2"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  exact="true"
+                  offset={-140}
+                >
                   rising fund
                 </Link>
-                <Link onClick={handleCloseMenu} to="#team">
+                <Link
+                  onClick={handleCloseMenu}
+                  to="team"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  exact="true"
+                  offset={-140}
+                >
                   team
                 </Link>
                 <div className={styles.footerSocials}>
@@ -71,16 +117,40 @@ const Header = () => {
             <img src={logo} alt="saino ventures logo" className={styles.logo} />
 
             <div className={styles.navMenu}>
-              <Link onClick={handleCloseMenu} to="#manifesto">
+              <Link
+                onClick={handleCloseMenu}
+                to="manifesto"
+                smooth="easeOutSine"
+                duration={2500}
+                exact="true"
+              >
                 Manifesto
               </Link>
-              <Link onClick={handleCloseMenu} to="#investment">
+              <Link
+                onClick={handleCloseMenu}
+                to="investment"
+                smooth="easeOutSine"
+                duration={2000}
+                exact="true"
+              >
                 Investissements
               </Link>
-              <Link onClick={handleCloseMenu} to="#investment2">
+              <Link
+                onClick={handleCloseMenu}
+                to="investment2"
+                smooth="easeOutSine"
+                duration={2500}
+                exact="true"
+              >
                 rising fund
               </Link>
-              <Link onClick={handleCloseMenu} to="#team">
+              <Link
+                onClick={handleCloseMenu}
+                to="team"
+                smooth="easeOutSine"
+                duration={3000}
+                exact="true"
+              >
                 team
               </Link>
               <LanguageDropdown />
@@ -89,7 +159,12 @@ const Header = () => {
         </nav>
 
         <div className={styles.learnMore}>
-          <Link to="#investment">
+          <Link
+            to="investment"
+            smooth="easeOutSine"
+            duration={2500}
+            exact="true"
+          >
             <img src={chevronDown} alt="learn More" />
           </Link>
           <span>En savoir plus</span>

@@ -37,6 +37,7 @@
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.3",
     "react-responsive-carousel": "^3.2.19",
+    "react-scroll": "^1.8.3",
     "sass": "^1.35.2"
   }
 }
