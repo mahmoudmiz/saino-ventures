@@ -63,7 +63,6 @@ const Header = () => {
                   to="manifesto"
                   smooth="easeOutSine"
                   duration={2500}
-                  exact="true"
                   offset={-140}
                 >
                   Manifesto
@@ -74,7 +73,6 @@ const Header = () => {
                   to="investment"
                   smooth="easeOutSine"
                   duration={2500}
-                  exact="true"
                   offset={-140}
                 >
                   Investissements
@@ -85,7 +83,6 @@ const Header = () => {
                   to="investment2"
                   smooth="easeOutSine"
                   duration={2500}
-                  exact="true"
                   offset={-140}
                 >
                   rising fund
@@ -95,7 +92,6 @@ const Header = () => {
                   to="team"
                   smooth="easeOutSine"
                   duration={2500}
-                  exact="true"
                   offset={-140}
                 >
                   team
@@ -122,7 +118,7 @@ const Header = () => {
                 to="manifesto"
                 smooth="easeOutSine"
                 duration={2500}
-                exact="true"
+                offset={-140}
               >
                 Manifesto
               </Link>
@@ -130,8 +126,8 @@ const Header = () => {
                 onClick={handleCloseMenu}
                 to="investment"
                 smooth="easeOutSine"
-                duration={2000}
-                exact="true"
+                duration={2500}
+                offset={-140}
               >
                 Investissements
               </Link>
@@ -140,7 +136,7 @@ const Header = () => {
                 to="investment2"
                 smooth="easeOutSine"
                 duration={2500}
-                exact="true"
+                offset={-140}
               >
                 rising fund
               </Link>
@@ -148,8 +144,8 @@ const Header = () => {
                 onClick={handleCloseMenu}
                 to="team"
                 smooth="easeOutSine"
-                duration={3000}
-                exact="true"
+                duration={2500}
+                offset={-140}
               >
                 team
               </Link>
@@ -163,7 +159,7 @@ const Header = () => {
             to="investment"
             smooth="easeOutSine"
             duration={2500}
-            exact="true"
+            offset={-140}
           >
             <img src={chevronDown} alt="learn More" />
           </Link>
