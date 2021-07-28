@@ -14,7 +14,7 @@ import * as styles from "./styles.module.scss";
 // markup
 const Footer = () => {
   return (
-    <footer id="footer" className={styles.footer}>
+    <footer id="footer">
       <div className={styles.innerWrapper}>
         <img
           src={logo}

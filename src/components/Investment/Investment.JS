@@ -40,7 +40,7 @@ const ListItem = ({ children, title }) => {
   const [showMore, setShowMore] = React.useState(false);
   return (
     <Collapse in={showMore} collapsedSize={44}>
-      <div className={styles.listItem}>
+      <div>
         <div
           className={styles.listItemTile}
           onClick={() => setShowMore((prev) => !prev)}
@@ -217,7 +217,7 @@ const Investment = () => {
         </div>
 
         <div className={styles.investmentBlocksWrapper}>
-          <div className={styles.innerWrapper}>
+          <div>
             <div className={styles.investmentBlock}>
               <h5>
                 <Trans>Types d’investissements</Trans>
