@@ -110,46 +110,52 @@ const Header = () => {
           </div>
 
           <div className={styles.desktopNavMenu}>
-            <img src={logo} alt="saino ventures logo" className={styles.logo} />
+            <div className={styles.innerWrapperDesktopNav}>
+              <img
+                src={logo}
+                alt="saino ventures logo"
+                className={styles.logo}
+              />
 
-            <div className={styles.navMenu}>
-              <Link
-                onClick={handleCloseMenu}
-                to="manifesto"
-                smooth="easeOutSine"
-                duration={2500}
-                offset={-140}
-              >
-                Manifesto
-              </Link>
-              <Link
-                onClick={handleCloseMenu}
-                to="investment"
-                smooth="easeOutSine"
-                duration={2500}
-                offset={-140}
-              >
-                Investissements
-              </Link>
-              <Link
-                onClick={handleCloseMenu}
-                to="investment2"
-                smooth="easeOutSine"
-                duration={2500}
-                offset={-140}
-              >
-                rising fund
-              </Link>
-              <Link
-                onClick={handleCloseMenu}
-                to="team"
-                smooth="easeOutSine"
-                duration={2500}
-                offset={-140}
-              >
-                team
-              </Link>
-              <LanguageDropdown />
+              <div className={styles.navMenu}>
+                <Link
+                  onClick={handleCloseMenu}
+                  to="manifesto"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  offset={-140}
+                >
+                  Manifesto
+                </Link>
+                <Link
+                  onClick={handleCloseMenu}
+                  to="investment"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  offset={-140}
+                >
+                  Investissements
+                </Link>
+                <Link
+                  onClick={handleCloseMenu}
+                  to="investment2"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  offset={-140}
+                >
+                  rising fund
+                </Link>
+                <Link
+                  onClick={handleCloseMenu}
+                  to="team"
+                  smooth="easeOutSine"
+                  duration={2500}
+                  offset={-140}
+                >
+                  team
+                </Link>
+                <LanguageDropdown />
+              </div>
             </div>
           </div>
         </nav>

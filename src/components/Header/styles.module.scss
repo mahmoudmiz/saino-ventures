@@ -25,35 +25,17 @@ header {
 }
 
 .scrollActive {
-  width: 100%;
-  height: 110px;
-  background: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  transition: all 1s ease-in-out;
-
-  @media (min-width: $breakpointTablet) {
-    height: 85px;
-
-    .desktopNavMenu {
-      max-width: 1290px;
-      padding: 0.5rem 2rem 0 2rem;
-      margin: 0 auto;
-    }
-
-    .logo {
-      width: 60px;
-      height: 64px;
-      transition: all 0.5 ease-in-out;
-    }
+  .desktopNavMenu {
+    background: black;
+    z-index: 9999;
   }
 
-  @media (min-width: $breakpointExtralarge) {
-    .desktopNavMenu {
-      padding: 0.5rem 0 0 0;
-    }
+  .mobileNavMenu {
+    background: black;
+    height: 120px;
+    width: 100%;
+    margin-left: -2rem;
+    margin-top: -2rem;
   }
 }
 .mobileNavMenu {
@@ -64,8 +46,9 @@ header {
     position: fixed;
     top: 32px;
     left: 35px;
-    width: 60px;
+    width: 60.29px;
     height: 64px;
+    transition: all 0.5 ease-in-out;
   }
 
   @media (min-width: $breakpointTablet) {
@@ -239,9 +222,21 @@ header {
 
 // desktop menu
 .desktopNavMenu {
+  height: 140px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
   display: none;
-  justify-content: space-between;
 
+  .innerWrapperDesktopNav {
+    max-width: 1325px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   .navMenu {
     display: flex;
     height: 19px;
@@ -272,6 +267,8 @@ header {
 
 .logo {
   z-index: 2500;
+  width: 95px;
+  height: 101px;
 }
 
 .learnMore {
