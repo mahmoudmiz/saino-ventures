@@ -160,6 +160,18 @@ const Header = () => {
           </div>
         </nav>
 
+        <div className={styles.headerText}>
+          <h3>Founded in 2021</h3>
+          <h5>
+            Saino
+            <span> Ventures</span>
+          </h5>
+          <p>
+            Asset management firm in <br />
+            <span> Distributed Ledger Technologies</span>
+          </p>
+        </div>
+
         <div className={styles.learnMore}>
           <Link
             to="investment"

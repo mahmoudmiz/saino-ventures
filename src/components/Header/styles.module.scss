@@ -35,8 +35,8 @@ header {
     transition: all 0.5s ease-in-out;
     height: 120px;
     width: 100%;
-    margin-left: -2rem;
-    margin-top: -2rem;
+    top: 0;
+    left: 0;
   }
 }
 .mobileNavMenu {
@@ -302,5 +302,80 @@ header {
   }
   @media (min-width: $breakpointTablet) {
     margin: 0 70px;
+  }
+}
+
+.headerText {
+  color: white;
+  margin-top: 180px;
+  margin-left: 0;
+
+  h3 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: unset;
+    text-transform: uppercase;
+    span {
+      margin-top: 0;
+      display: block;
+      margin-left: 30px;
+    }
+  }
+
+  p {
+    margin-top: 64px;
+    text-align: right;
+    float: right;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    span {
+      font-weight: bold;
+      max-width: 150px;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $breakpointTablet) {
+    margin-top: 220px;
+    margin-left: 100px;
+    max-width: 920px;
+  }
+
+  @media (min-width: $breakpointTablet) {
+    h3 {
+      margin-bottom: 22px;
+    }
+
+    h5 {
+      font-size: 120px;
+      line-height: 90px;
+      span {
+        margin-top: 22px;
+        margin-left: 68px;
+      }
+    }
+
+    p {
+      margin-top: -35px;
+      float: right;
+      text-align: left;
+
+      span {
+        max-width: initial;
+      }
+    }
   }
 }
