@@ -4,27 +4,7 @@
   padding: 0 2rem;
   padding-bottom: 3rem;
   padding-top: 50px;
-  position: relative;
   overflow: hidden;
-
-  &::after {
-    content: "investisseme";
-    position: absolute;
-    text-transform: uppercase;
-    top: 180px;
-    left: 15px;
-    font-size: 100px;
-    line-height: 90px;
-    color: $white4;
-    z-index: -1;
-
-    @media (min-width: $breakpointTablet) {
-      font-size: 200px;
-      right: -230px;
-      left: unset;
-      top: 250px;
-    }
-  }
   @media (min-width: $breakpointTablet) {
     padding-bottom: 4rem;
     padding-top: 100px;
@@ -34,9 +14,27 @@
 .mainInnerWrapper {
   max-width: $maxwidth;
   margin: 0 auto;
+  position: relative;
 
+  &::after {
+    content: "investisseme";
+    position: absolute;
+    text-transform: uppercase;
+    top: 130px;
+    left: -20px;
+    font-size: 100px;
+    line-height: 90px;
+    color: $white4;
+    z-index: -1;
+  }
   @media (min-width: $breakpointTablet) {
     padding: 0;
+
+    &::after {
+      font-size: 200px;
+      left: 330px;
+      top: 150px;
+    }
   }
 }
 
@@ -54,7 +52,7 @@
   }
 
   h5 {
-    color: $grey3;
+    color: $purple;
     margin-bottom: 6px;
     font-weight: 500;
     font-size: 11px;
@@ -66,7 +64,7 @@
   h3 {
     font-weight: 500;
     max-width: 200px;
-    color: $black3;
+    color: black;
     font-size: 20px;
     line-height: 24px;
   }
@@ -76,6 +74,7 @@
     font-size: 13px;
     line-height: 22px;
     font-weight: 400;
+    margin-top: 20px;
   }
 
   &:last-of-type {
@@ -155,11 +154,17 @@
     }
   }
   h5 {
+    color: black;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 400;
+
+    @media (max-width: $breakpointTablet) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
   h3 {
     color: black;
@@ -171,15 +176,22 @@
     font-weight: bold;
     &::first-line {
       font-weight: 400;
-      line-height: 1.5rem;
+      line-height: 16px;
+      color: $grey3;
     }
-    margin-bottom: 23px;
+    margin-bottom: 44px;
   }
 
   p {
+    font-weight: 400;
     font-size: 13px;
     line-height: 22px;
     color: $black4;
+
+    @media (max-width: $breakpointTablet) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
 

@@ -3,7 +3,8 @@ import Grow from "@material-ui/core/Grow";
 import { Trans } from "gatsby-plugin-react-i18next";
 
 //assets
-import placeholder from "../../images/placeholder.png";
+import teamMember1 from "../../images/team-1.svg";
+import teamMember2 from "../../images/team-2.svg";
 
 //styles
 import * as styles from "./styles.module.scss";
@@ -23,27 +24,27 @@ const Team = () => {
         </div>
 
         <div className={styles.membersList}>
-          <Grow in={true}>
+          <Grow in={true} timeout={1500}>
             <div className={styles.teamMember}>
-              <img src={placeholder} alt="team member" />
+              <img src={teamMember1} alt="team member" />
               <h3>
                 <Trans>Lorem ipsum</Trans> <br />
                 <Trans>LOREM IPSUM DOLOR</Trans>
               </h3>
             </div>
           </Grow>
-          <Grow in={true} timeout={1000}>
+          <Grow in={true} timeout={2000}>
             <div className={styles.teamMember}>
-              <img src={placeholder} alt="team member" />
+              <img src={teamMember2} alt="team member" />
               <h3>
                 <Trans>Lorem ipsum</Trans> <br />
                 <Trans>LOREM IPSUM DOLOR</Trans>
               </h3>
             </div>
           </Grow>
-          <Grow in={true} timeout={1200}>
+          <Grow in={true} timeout={2500}>
             <div className={styles.teamMember}>
-              <img src={placeholder} alt="team member" />
+              <img src={teamMember2} alt="team member" />
               <h3>
                 <Trans>Lorem ipsum</Trans> <br />
                 <Trans>LOREM IPSUM DOLOR</Trans>

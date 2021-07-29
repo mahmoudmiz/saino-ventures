@@ -3,14 +3,12 @@
 .investment2 {
   padding: 0 2rem;
   padding-top: 3rem;
-  padding-bottom: 3rem;
   background: $black1;
   color: white;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 
   @media (min-width: $breakpointTablet) {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 87px;
   }
 }
 
@@ -25,7 +23,7 @@
 
 .investment2Block {
   h5 {
-    color: $grey3;
+    color: $purple;
     font-size: 11px;
     line-height: 14px;
     letter-spacing: 0.1em;
@@ -36,8 +34,21 @@
   h3 {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 2rem;
     font-weight: 500;
+  }
+
+  margin-bottom: 2rem;
+
+  @media (min-width: $breakpointTablet) {
+    margin-bottom: 90px;
+    h5 {
+      font-size: 12px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -82,12 +93,12 @@
       text-align: center;
 
       h5 {
-        font-size: 40px;
-        line-height: 49px;
-        font-weight: normal;
+        font-size: 25px;
+        line-height: 24px;
+        font-weight: 400;
       }
       p {
-        font-size: 11px;
+        font-size: 8px;
         line-height: 14px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -154,8 +165,46 @@
     display: inline-block;
     margin-top: 2rem;
     &::first-line {
-      color: $grey4;
+      color: $purple;
       font-weight: 700;
     }
   }
+
+  button {
+    cursor: pointer;
+    max-width: 307px;
+    margin-top: 80px;
+    padding: 17px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 8px;
+    border: 2px solid $purple;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: $black1;
+    color: white;
+
+    &:hover,
+    &:active {
+      background: white;
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+      color: black;
+    }
+  }
+
+  @media (min-width: $breakpointTablet) {
+    .sliderText {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.underSliderWrapper {
+  display: flex;
+  justify-content: space-between;
 }

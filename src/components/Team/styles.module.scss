@@ -1,25 +1,10 @@
 @use '../../styles/variables' as *;
 
 .team {
-  padding: 0 2rem;
-  padding-bottom: 2rem;
+  padding: 47px 2rem;
 
   @media (min-width: $breakpointTablet) {
-    position: relative;
-    margin-bottom: 5rem;
-    z-index: 3;
-
-    &::after {
-      content: "TEAM";
-      position: absolute;
-      font-size: 200px;
-      line-height: 90px;
-      font-weight: bold;
-      color: $white2;
-      bottom: 40px;
-      right: 50px;
-      z-index: -1;
-    }
+    padding: 97px 2rem;
   }
 }
 
@@ -29,20 +14,36 @@
 
   @media (min-width: $breakpointTablet) {
     padding: 0;
+    position: relative;
+    z-index: 3;
+
+    &::after {
+      content: "TEAM";
+      position: absolute;
+      font-size: 200px;
+      line-height: 90px;
+      color: $white2;
+      top: 210px;
+      right: -55px;
+      z-index: -1;
+      font-weight: bold;
+    }
   }
 }
 
 .teamHeader {
   margin-bottom: 1.5rem;
   h3 {
+    font-weight: 500;
     font-size: 11px;
     line-height: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: $grey3;
+    color: $purple;
     margin-bottom: 0.5rem;
   }
   h5 {
+    font-size: 600;
     font-size: 20px;
     line-height: 24px;
     color: $black3;
@@ -50,6 +51,16 @@
 
   @media (min-width: $breakpointTablet) {
     max-width: 273px;
+
+    h3 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    h5 {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 }
 .teamMember {
@@ -65,7 +76,8 @@
     line-height: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
+    text-align: center;
     &::first-line {
       color: $grey3;
       font-weight: 400;
@@ -91,11 +103,11 @@
         max-width: 325px;
       }
       &:nth-of-type(2) {
-        top: 3.5rem;
+        top: 6rem;
       }
 
       &:nth-of-type(3) {
-        top: -5rem;
+        top: 3rem;
         margin-right: 0;
       }
     }

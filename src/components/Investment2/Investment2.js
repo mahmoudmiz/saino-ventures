@@ -27,7 +27,7 @@ const Investment2 = () => {
             <Trans>Types d’investissements</Trans>
           </h5>
           <h3>
-            <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
+            <Trans>Lorem ipsum dolor</Trans>
           </h3>
         </div>
         <div className={styles.wrapper}>
@@ -50,6 +50,13 @@ const Investment2 = () => {
                 <Trans>Investissement min actuel</Trans>
               </p>
             </div>
+
+            <div>
+              <h5>90K $</h5>
+              <p>
+                <Trans>Investissement min actuel</Trans>
+              </p>
+            </div>
           </div>
         </div>
         <div className={styles.sliderContainer}>
@@ -67,10 +74,24 @@ const Investment2 = () => {
             onChange={handleChange}
             className={styles.slider}
           />
-          <span className={styles.sliderText}>
-            <Trans>objectif</Trans> <br />
-            <Trans>phase</Trans> 1
-          </span>
+          <div className={styles.underSliderWrapper}>
+            <span className={styles.sliderText}>
+              <Trans>objectif</Trans> <br />
+              <Trans>phase</Trans> 1
+            </span>
+            <span className={styles.sliderText}>
+              <Trans>objectif</Trans> <br />
+              <Trans>phase</Trans> 1
+            </span>
+            <span className={styles.sliderText}>
+              <Trans>objectif</Trans> <br />
+              <Trans>phase</Trans> 1
+            </span>
+          </div>
+
+          <button>
+            <Trans>montant investit actuel</Trans>
+          </button>
         </div>
       </div>
     </section>
