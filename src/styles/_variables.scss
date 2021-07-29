@@ -14,6 +14,7 @@ $black2: #202020;
 $black3: #040404;
 $black4: #4a4a4a;
 $black5: #111111;
+$black6: #181818;
 
 $white1: #f6f6f6;
 $white2: #f7f7f7;
@@ -49,6 +50,18 @@ $maxwidth: 1130px;
 
   to {
     margin-left: 0%;
+  }
+}
+
+@keyframes slideinRight {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }
 

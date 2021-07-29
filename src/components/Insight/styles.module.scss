@@ -99,6 +99,7 @@
   display: none;
 
   @media (min-width: $breakpointTablet) {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     & > div {
