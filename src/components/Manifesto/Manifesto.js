@@ -6,8 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import * as styles from "./styles.module.scss";
 
 // assets
-import SAINO_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION.svg";
-
+import Video_ILLUSTRATION from "../../images/video.mp4";
 // markup
 const Manifesto = () => {
   return (
@@ -28,11 +27,15 @@ const Manifesto = () => {
           </p>
         </div>
         <div className={styles.contentWrapper}>
-          <img
-            src={SAINO_ILLUSTRATION}
-            className={styles.manifestoAsset}
-            alt="manifestoAsset"
+          <video
+            autostart
+            loop
+            autoPlay
+            muted
+            src={Video_ILLUSTRATION}
+            type="video/mp4"
           />
+
           <div className={styles.rightWrapper}>
             <div className={styles.manifestoBlock}>
               <h5>Manifesto</h5>

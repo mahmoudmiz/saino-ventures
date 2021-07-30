@@ -4,28 +4,6 @@
   background-color: $black6;
   overflow: hidden;
   padding: 47px 2rem;
-  position: relative;
-
-  &::after {
-    content: "MANIFESTO";
-    font-weight: 500;
-    position: absolute;
-    font-size: 100px;
-    line-height: 90%;
-    text-transform: uppercase;
-    color: $black2;
-    animation-duration: 3s;
-    animation-name: slideinRight;
-    display: inline-block;
-    left: -35px;
-    top: 250px;
-
-    @media (min-width: $breakpointTablet) {
-      top: 200px;
-      font-size: 200px;
-      left: 30%;
-    }
-  }
 
   @media (min-width: $breakpointTablet) {
     padding: 97px 2rem 63px 2rem;
@@ -35,9 +13,36 @@
 .innerWrapper {
   max-width: $maxwidth;
   margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "MANIFESTO";
+    font-weight: bold;
+    position: absolute;
+    font-size: 100px;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: $black2;
+    animation-duration: 5s;
+    animation-name: slideinRight;
+    display: inline-block;
+    left: -35px;
+    top: 250px;
+  }
+
+  @media (min-width: 360px) {
+    &::after {
+      top: 200px;
+    }
+  }
 
   @media (min-width: $breakpointTablet) {
     padding: 0;
+    &::after {
+      top: 100px;
+      font-size: 200px;
+      left: 30%;
+    }
   }
 }
 .manifestoBlock {
@@ -148,19 +153,28 @@
 }
 
 .contentWrapper {
+  margin-top: 5rem;
+  video {
+    max-width: 440px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3rem;
+  }
   @media (min-width: $breakpointTablet) {
     display: flex;
     justify-content: space-between;
-    img {
+
+    video {
       margin-right: 86px;
+      margin-bottom: 0;
     }
     .manifestoBlock {
-      margin-top: 12rem;
+      margin-top: 6rem;
     }
   }
 
   @media (min-width: $breakpointExtralarge) {
-    img {
+    video {
       margin-right: 136px;
     }
   }

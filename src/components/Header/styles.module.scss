@@ -309,8 +309,10 @@ header {
   color: white;
   margin-top: 180px;
   margin-left: 0;
+  max-width: 420px;
 
   h3 {
+    transition: all 1s ease-in-out;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -320,6 +322,7 @@ header {
   }
 
   h5 {
+    transition: all 1s ease-in-out;
     font-weight: 600;
     font-size: 50px;
     line-height: unset;
@@ -332,6 +335,7 @@ header {
   }
 
   p {
+    transition: all 1s ease-in-out;
     margin-top: 64px;
     text-align: right;
     float: right;
@@ -348,13 +352,45 @@ header {
     }
   }
 
-  @media (min-width: $breakpointTablet) {
-    margin-top: 220px;
-    margin-left: 100px;
-    max-width: 920px;
+  @media (min-width: 500px) {
+    margin-left: 70px;
+
+    p {
+      margin-top: 44px;
+    }
   }
 
   @media (min-width: $breakpointTablet) {
+    max-width: 650px;
+    margin-top: 220px;
+    margin-left: 120px;
+    h3 {
+      margin-bottom: 22px;
+    }
+
+    h5 {
+      font-size: 80px;
+      line-height: 50px;
+      span {
+        margin-top: 22px;
+        margin-left: 68px;
+      }
+    }
+
+    p {
+      margin-top: 30px;
+      float: right;
+      text-align: left;
+
+      span {
+        max-width: initial;
+      }
+    }
+  }
+
+  @media (min-width: $breakpointExtralarge) {
+    max-width: 920px;
+
     h3 {
       margin-bottom: 22px;
     }

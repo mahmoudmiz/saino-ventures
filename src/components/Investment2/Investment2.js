@@ -1,7 +1,7 @@
 import * as React from "react";
 import Slider from "@material-ui/core/Slider";
 import { Trans } from "gatsby-plugin-react-i18next";
-
+import { Link } from "gatsby";
 //styles
 import * as styles from "./styles.module.scss";
 
@@ -89,9 +89,9 @@ const Investment2 = () => {
             </span>
           </div>
 
-          <button>
+          <Link to="/contact">
             <Trans>montant investit actuel</Trans>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

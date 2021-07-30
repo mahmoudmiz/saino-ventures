@@ -154,6 +154,9 @@
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    span:nth-of-type(2) {
+      margin-left: 14px;
+    }
   }
 
   .sliderText {
@@ -170,7 +173,8 @@
     }
   }
 
-  button {
+  a {
+    display: inline-block;
     cursor: pointer;
     max-width: 307px;
     margin-top: 80px;
@@ -185,6 +189,7 @@
     text-transform: uppercase;
     background: $black1;
     color: white;
+    text-decoration: none;
 
     &:hover,
     &:active {
