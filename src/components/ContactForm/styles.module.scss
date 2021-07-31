@@ -1,5 +1,14 @@
 @use '../../styles/variables' as *;
 
+.innerWrapper {
+  max-width: $maxwidth;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+  }
+}
+
 .form {
   padding: 5rem 2rem;
 }
@@ -49,7 +58,9 @@ form {
     }
   }
 
-  input {
+  input,
+  textarea {
+    margin-top: 8px;
     height: 48px;
     border: 1px solid $grey3;
     border-radius: 4px;
@@ -60,18 +71,24 @@ form {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: $black5;
+    outline: none;
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+    }
+
+    &::placeholder {
+      color: $black7;
+    }
   }
 
   textarea {
-    border: 1px solid $grey3;
-    border-radius: 4px;
-    padding: 17px 20px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     height: 140px;
+
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+    }
   }
 
   button {
@@ -105,16 +122,25 @@ form {
     width: 100%;
   }
 
+  .amountInput {
+    position: relative;
+
+    &::after {
+      content: "$";
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+
   @media (min-width: $breakpointTablet) {
     flex-direction: row;
     flex-wrap: wrap;
-
-    .odd {
-      input,
-      textarea {
-        margin-right: 20px;
-      }
-    }
 
     button {
       display: block;
@@ -123,12 +149,17 @@ form {
       max-width: 307px;
     }
   }
-}
-.innerWrapper {
-  max-width: $maxwidth;
-  margin: 0 auto;
 
-  @media (min-width: $breakpointTablet) {
-    padding: 0;
+  @media (min-width: 1200px) {
+    .odd {
+      input,
+      textarea {
+        margin-right: 20px;
+      }
+    }
+
+    .amountInput::after {
+      right: 40px;
+    }
   }
 }

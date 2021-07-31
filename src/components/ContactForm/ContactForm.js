@@ -1,12 +1,23 @@
 import * as React from "react";
-
-//components
+import Select from "react-select";
 
 //styles
 import * as styles from "./styles.module.scss";
+import "./select.scss";
 
 // markup
 const ContactForm = () => {
+  const providenceOptions = [
+    { value: "paris", label: "Paris" },
+    { value: "lille", label: "Lille" },
+    { value: "lyon", label: "Lyon" },
+  ];
+
+  const languagesOptions = [
+    { value: "francais", label: "Français" },
+    { value: "english", label: "English" },
+  ];
+
   return (
     <section id="contact" className={styles.form}>
       <div className={styles.innerWrapper}>
@@ -17,29 +28,34 @@ const ContactForm = () => {
         <form>
           <label className={styles.odd}>
             Nom*
-            <input type="text" />
+            <input type="text" required placeholder="nom" />
           </label>
           <label>
             prénom*
-            <input type="text" />
+            <input type="text" required placeholder="prénom" />
           </label>
           <label className={styles.odd}>
             adresse email*
-            <input type="email" />
+            <input type="email" required placeholder="adresse email" />
           </label>
           <label>
             téléphone
-            <input type="number" />
+            <input type="tel" placeholder="téléphone" />
           </label>
-          <label className={styles.odd}>
+          <label className={`${styles.odd} ${styles.amountInput}`}>
             montant de l'investissement souhaité*
-            <input />
+            <input type="text" required placeholder="0" />
             <span>Ne représente aucunement un engagement.</span>
           </label>
 
           <label>
             provenance
-            <input />
+            <Select
+              options={providenceOptions}
+              placeholder="provenance"
+              className="selectContainer"
+              classNamePrefix="select"
+            />
             <span>
               Des document attestant de la provenance des fonds vous seront
               demandés.
@@ -52,7 +68,12 @@ const ContactForm = () => {
 
           <label>
             Langue de communication souhaitée
-            <input />
+            <Select
+              options={languagesOptions}
+              placeholder="Français"
+              className="selectContainer"
+              classNamePrefix="select"
+            />
           </label>
 
           <div className={styles.formTextBottom}>(*) Champs obligatoires</div>
