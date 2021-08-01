@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 //components
-import Header from "../../components/Header/Header";
+import Nav from "../../components/Nav/Nav";
 import ContactForm from "../../components/ContactForm/ContactForm";
 
 //styles
@@ -12,6 +12,7 @@ import "./index.scss";
 const IndexPage = () => {
   return (
     <main>
+      <Nav whiteBackground />
       <ContactForm />
     </main>
   );

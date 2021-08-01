@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Link } from "react-scroll";
-
+import { navigate } from "gatsby";
+import { animateScroll } from "react-scroll";
 //components
 import logo from "../../images/logo.svg";
-import chevronDown from "../../images/chevron-down.svg";
+import logoWhiteBg from "../../images/logo-white-bg.svg";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 
 //assets
@@ -16,10 +17,16 @@ import linkedIcon from "../../images/linkedIn.svg";
 import * as styles from "./styles.module.scss";
 
 // markup
-const Nav = () => {
+const Nav = ({ whiteBackground, isHomePage }) => {
   const inputRef = React.useRef(null);
-  const handleCloseMenu = () => {
-    inputRef.current.checked = false;
+  const handleNavigation = (route) => {
+    if (inputRef.current.checked) {
+      inputRef.current.checked = false;
+    }
+
+    if (!isHomePage) {
+      navigate(`/#${route}`);
+    }
   };
 
   const [scrollNav, setScrollNav] = React.useState(false);
@@ -37,11 +44,27 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
+  const handleLogoscrollUp = () => {
+    if (!isHomePage) {
+      navigate(`/`);
+    }
+    animateScroll.scrollToTop({ smooth: "easeInSine", duration: 3000 });
+  };
+
   return (
-    <div className={styles.navWrapper}>
+    <div className={` ${whiteBackground ? styles.whiteBackground : ""}`}>
       <nav className={scrollNav ? styles.scrollActive : ""}>
         <div className={styles.mobileNavMenu}>
-          <img src={logo} alt="saino ventures logo" className={styles.logo} />
+          <img
+            onClick={handleLogoscrollUp}
+            src={
+              whiteBackground && (!scrollNav || inputRef.current.checked)
+                ? logoWhiteBg
+                : logo
+            }
+            alt="saino ventures logo"
+            className={styles.logo}
+          />
           <input
             type="checkbox"
             id="navToggle"
@@ -57,8 +80,7 @@ const Nav = () => {
           <div className={styles.navMenu}>
             <div className={styles.navList}>
               <Link
-                activeClass="active"
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("manifesto")}
                 to="manifesto"
                 smooth="easeOutSine"
                 duration={2500}
@@ -67,8 +89,7 @@ const Nav = () => {
                 Manifesto
               </Link>
               <Link
-                activeClass="active"
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("investment")}
                 to="investment"
                 smooth="easeOutSine"
                 duration={2500}
@@ -77,8 +98,7 @@ const Nav = () => {
                 Investissements
               </Link>
               <Link
-                activeClass="active"
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("investment2")}
                 to="investment2"
                 smooth="easeOutSine"
                 duration={2500}
@@ -87,7 +107,7 @@ const Nav = () => {
                 rising fund
               </Link>
               <Link
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("team")}
                 to="team"
                 smooth="easeOutSine"
                 duration={2500}
@@ -110,11 +130,16 @@ const Nav = () => {
 
         <div className={styles.desktopNavMenu}>
           <div className={styles.innerWrapperDesktopNav}>
-            <img src={logo} alt="saino ventures logo" className={styles.logo} />
+            <img
+              onClick={handleLogoscrollUp}
+              src={whiteBackground && !scrollNav ? logoWhiteBg : logo}
+              alt="saino ventures logo"
+              className={styles.logo}
+            />
 
             <div className={styles.navMenu}>
               <Link
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("manifesto")}
                 to="manifesto"
                 smooth="easeOutSine"
                 duration={2500}
@@ -123,7 +148,7 @@ const Nav = () => {
                 Manifesto
               </Link>
               <Link
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("investment")}
                 to="investment"
                 smooth="easeOutSine"
                 duration={2500}
@@ -132,7 +157,7 @@ const Nav = () => {
                 Investissements
               </Link>
               <Link
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("investment2")}
                 to="investment2"
                 smooth="easeOutSine"
                 duration={2500}
@@ -141,7 +166,7 @@ const Nav = () => {
                 rising fund
               </Link>
               <Link
-                onClick={handleCloseMenu}
+                onClick={() => handleNavigation("team")}
                 to="team"
                 smooth="easeOutSine"
                 duration={2500}
@@ -149,7 +174,9 @@ const Nav = () => {
               >
                 team
               </Link>
-              <LanguageDropdown />
+              <LanguageDropdown
+                whiteBackground={whiteBackground && !scrollNav}
+              />
             </div>
           </div>
         </div>

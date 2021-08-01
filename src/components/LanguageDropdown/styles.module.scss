@@ -90,3 +90,22 @@
   transform: scale(-1);
   transition: all 0.3s ease-in-out;
 }
+
+.whiteBackground {
+  button {
+    color: black;
+    &::after {
+      content: url("../../images/chevron-down-black.svg");
+    }
+  }
+
+  .languagesList {
+    background: $black2;
+    span {
+      color: white;
+      &:hover {
+        background: $grey4;
+      }
+    }
+  }
+}

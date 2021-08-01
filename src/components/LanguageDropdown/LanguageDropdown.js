@@ -8,7 +8,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 //styles
 import * as styles from "./styles.module.scss";
 
-const LanguageDropdown = () => {
+const LanguageDropdown = ({ whiteBackground }) => {
   const { languages, changeLanguage } = useI18next();
   const [showOptions, setShowOptions] = React.useState(false);
 
@@ -18,7 +18,7 @@ const LanguageDropdown = () => {
         <div
           className={`${styles.changeLanguage} ${
             showOptions ? styles.active : ""
-          }`}
+          } ${whiteBackground ? styles.whiteBackground : ""}`}
           onClick={() => setShowOptions((prev) => !prev)}
         >
           <button>

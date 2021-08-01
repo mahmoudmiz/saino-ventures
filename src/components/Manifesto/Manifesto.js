@@ -28,7 +28,6 @@ const Manifesto = () => {
         </div>
         <div className={styles.contentWrapper}>
           <video
-            autostart
             loop
             autoPlay
             muted

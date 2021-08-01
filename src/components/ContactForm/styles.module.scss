@@ -1,5 +1,9 @@
 @use '../../styles/variables' as *;
 
+.form {
+  padding: 241px 2rem 80px 2rem;
+}
+
 .innerWrapper {
   max-width: $maxwidth;
   margin: 0 auto;
@@ -7,10 +11,6 @@
   @media (min-width: $breakpointTablet) {
     padding: 0;
   }
-}
-
-.form {
-  padding: 5rem 2rem;
 }
 
 .formHeader {

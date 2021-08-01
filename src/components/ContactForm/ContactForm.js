@@ -63,7 +63,7 @@ const ContactForm = () => {
           </label>
           <label className={styles.odd}>
             Message
-            <textarea>message</textarea>
+            <textarea defaultValue="message" />
           </label>
 
           <label>

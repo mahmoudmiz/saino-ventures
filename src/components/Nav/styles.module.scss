@@ -26,6 +26,7 @@
     left: 35px;
     width: 60.29px;
     height: 64px;
+    cursor: pointer;
   }
 
   @media (min-width: $breakpointTablet) {
@@ -246,4 +247,31 @@
   z-index: 2500;
   width: 95px;
   height: 101px;
+  cursor: pointer;
+}
+
+.whiteBackground {
+  .desktopNavMenu {
+    .navMenu {
+      a {
+        color: black;
+        &:hover,
+        &:active {
+          border-bottom: 1px solid $black1;
+        }
+      }
+    }
+  }
+
+  .scrollActive {
+    .navMenu {
+      a {
+        color: white;
+        &:hover,
+        &:active {
+          border-bottom: 1px solid $white1;
+        }
+      }
+    }
+  }
 }
