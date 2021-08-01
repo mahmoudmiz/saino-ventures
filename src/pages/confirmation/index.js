@@ -3,22 +3,22 @@ import { graphql } from "gatsby";
 
 //components
 import Nav from "../../components/Nav/Nav";
-import ContactForm from "../../components/ContactForm/ContactForm";
+import Confirmation from "../../components/Confirmation/Confirmation";
 
 //styles
 import "./index.scss";
 
 // markup
-const ContactPage = () => {
+const ConfirmationPage = () => {
   return (
     <main>
       <Nav whiteBackground />
-      <ContactForm />
+      <Confirmation />
     </main>
   );
 };
 
-export default ContactPage;
+export default ConfirmationPage;
 
 export const query = graphql`
   query ($language: String!) {

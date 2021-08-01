@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-scroll";
 import { navigate } from "gatsby";
 import { animateScroll } from "react-scroll";
+
 //components
 import logo from "../../images/logo.svg";
 import logoWhiteBg from "../../images/logo-white-bg.svg";
