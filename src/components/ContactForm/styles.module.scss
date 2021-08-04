@@ -50,6 +50,7 @@ form {
       font-size: 14px;
       line-height: 24px;
       padding-top: 12px;
+      text-transform: none;
       color: $grey6;
     }
 
@@ -69,7 +70,7 @@ form {
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    text-transform: none;
     color: $black5;
     outline: none;
     &:focus,
@@ -79,11 +80,13 @@ form {
 
     &::placeholder {
       color: $black7;
+      text-transform: uppercase;
     }
   }
 
   textarea {
     height: 140px;
+    resize: none;
 
     &:focus,
     &:active {
