@@ -1,29 +1,24 @@
 import * as React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 //styles
 import * as styles from "./styles.module.scss";
 
 // assets
-import Video_ILLUSTRATION from "../../images/video.mp4";
+//import Video_ILLUSTRATION from "../../images/video.mp4";
+import Video_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION_NEW.mp4";
 // markup
 const Manifesto = () => {
   return (
     <section id="manifesto" className={styles.manifesto}>
       <div className={styles.innerWrapper}>
         <div className={styles.manifestoBlock}>
-          <h5>Manifesto</h5>
-          <h3>Lorem ipsum dolor</h3>
+          <h5><Trans>Manifesto</Trans></h5>
+          <h3><Trans>Architecture,DeFi et NFT's</Trans></h3>
           <p>
-            A l’heure actuelle, nous en sommes encore au stade du développement
-            des protocoles des futures DLT de demain qui devront potentiellement
-            constituer des normes à l’échelles internationales. Nous
-            investissons donc principalement sur des projets de type protocole.
-            Nous estimons également que la DeFi (finance décentralisé) ainsi que
-            les plateformes NFTs sont les premières applications des smart
-            contract ayant un véritable impact et un pouvoir disruptif
-            indéniable.
+            <Trans>Text manifesto 1</Trans>
           </p>
         </div>
         <div className={styles.contentWrapper}>
@@ -37,38 +32,29 @@ const Manifesto = () => {
 
           <div className={styles.rightWrapper}>
             <div className={styles.manifestoBlock}>
-              <h5>Manifesto</h5>
-              <h3>Lorem ipsum dolor</h3>
+              <h5><Trans>Manifesto</Trans></h5>
+              <h3><Trans>Intéropérabilité</Trans></h3>
               <p>
-                A l’heure actuelle, nous en sommes encore au stade du
-                développement des protocoles des futures DLT de demain qui
-                devront potentiellement constituer des normes à l’échelles
-                internationales. Nous investissons donc principalement sur des
-                projets de type protocole. Nous estimons également que la DeFi
-                (finance décentralisé) ainsi que les plateformes NFTs sont les
-                premières applications des smart contract ayant un véritable
-                impact et un pouvoir disruptif indéniable.
+                <Trans>Text manifesto 2</Trans>
               </p>
             </div>
 
             {/* only desktop*/}
             <div className={styles.desktopContainer}>
               <div className={styles.carouselItem}>
-                <h3>DLT</h3>
+                <h3><Trans>DLT</Trans></h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  <Trans>def 1</Trans>
                 </p>
               </div>
+              {/*
               <div className={styles.carouselItem}>
-                <h3>DLT</h3>
+                <h3>DAG</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  <Trans>def 2</Trans>
                 </p>
               </div>
+              */}
             </div>
           </div>
         </div>
@@ -76,13 +62,12 @@ const Manifesto = () => {
         <div className={styles.mobileContainer}>
           <Carousel selectedItem={0} showThumbs={false}>
             <div className={styles.carouselItem}>
-              <h3>DLT</h3>
+              <h3><Trans>DLT</Trans></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
+                <Trans>def 1</Trans>
               </p>
             </div>
+            {/*
             <div className={styles.carouselItem}>
               <h3>DLT</h3>
               <p>
@@ -99,6 +84,7 @@ const Manifesto = () => {
                 enim ad minim veniam.
               </p>
             </div>
+            */}
           </Carousel>
         </div>
       </div>

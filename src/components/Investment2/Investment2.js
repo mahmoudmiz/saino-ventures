@@ -25,10 +25,10 @@ const Investment2 = () => {
       <div className={styles.mainInnerWrapper}>
         <div className={styles.investment2Block}>
           <h5>
-            <Trans>Types d’investissements</Trans>
+            <Trans>Key figures for</Trans>
           </h5>
           <h3>
-            <Trans>Lorem ipsum dolor</Trans>
+            <Trans>Rising fund</Trans>
           </h3>
         </div>
         <div className={styles.wrapper}>
@@ -55,7 +55,7 @@ const Investment2 = () => {
             <div>
               <h5>90K $</h5>
               <p>
-                <Trans>Investissement min actuel</Trans>
+                <Trans>Investissement min suivant</Trans>
               </p>
             </div>
           </div>
@@ -77,8 +77,8 @@ const Investment2 = () => {
           />
           <div className={styles.underSliderWrapper}>
             <span className={styles.sliderText}>
-              <Trans>objectif</Trans> <br />
-              <Trans>phase</Trans> 1
+              <Trans>lancement</Trans> <br />
+              <Trans>phase</Trans> 0
             </span>
             <span className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
@@ -86,12 +86,12 @@ const Investment2 = () => {
             </span>
             <span className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
-              <Trans>phase</Trans> 1
+              <Trans>phase</Trans> 2
             </span>
           </div>
 
           <Link to="/contact">
-            <Trans>montant investit actuel</Trans>
+            <Trans>Je souhaite être early investor</Trans>
           </Link>
         </div>
       </div>
