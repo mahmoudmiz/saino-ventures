@@ -109,7 +109,8 @@ form {
 
     &:hover,
     &:active {
-      background: black;
+      background: #141414;
+      border: 2px solid #141414;
       opacity: 0.7;
       transition: all 0.3s ease-in-out;
       color: white;
