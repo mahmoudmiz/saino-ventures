@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import * as styles from "./styles.module.scss";
 
 // slider values
-const currentValue = 200000; //change the current value here
+const currentValue = 50000; //change the current value here
 
 const start = 0;
 const end = 1000000;
@@ -40,7 +40,7 @@ const Investment2 = () => {
           </div>
           <div className={styles.innerWrapper}>
             <div>
-              <h5>88K $</h5>
+              <h5>{value === end ? "1M $" : `${value / 1000}k $`}</h5>
               <p>
                 <Trans>montant investit actuel</Trans>
               </p>
@@ -63,7 +63,7 @@ const Investment2 = () => {
         <div className={styles.sliderContainer}>
           <div className={styles.sliderRange}>
             <span>0</span>
-            <span>{value === end ? "1M $" : `${value / 1000}k $`}</span>
+            <span>200K $</span>
             <span>1M $</span>
           </div>
 
@@ -76,15 +76,15 @@ const Investment2 = () => {
             className={styles.slider}
           />
           <div className={styles.underSliderWrapper}>
-            <span className={styles.sliderText}>
+            <span style={{textAlign:'left',marginTop: "1rem"}} className={styles.sliderText}>
               <Trans>lancement</Trans> <br />
               <Trans>phase</Trans> 0
             </span>
-            <span className={styles.sliderText}>
+            <span style={{marginTop: "1rem"}} className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
               <Trans>phase</Trans> 1
             </span>
-            <span className={styles.sliderText}>
+            <span style={{textAlign:'right',marginTop: "1rem"}} className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
               <Trans>phase</Trans> 2
             </span>
