@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-scroll";
 import { navigate } from "gatsby";
 import { animateScroll } from "react-scroll";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 //components
 import logo from "../../images/logo.svg";
@@ -96,7 +97,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                Investissements
+                <Trans>Investissements</Trans>
               </Link>
               <Link
                 onClick={() => handleNavigation("investment2")}
@@ -105,7 +106,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                rising fund
+                <Trans>rising fund</Trans>
               </Link>
               <Link
                 onClick={() => handleNavigation("team")}
@@ -114,7 +115,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                team
+                <Trans>team nav</Trans>
               </Link>
               <div className={styles.footerSocials}>
                 <img src={facebookIcon} alt="facebook" />
@@ -155,7 +156,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                Investissements
+                <Trans>Investissements</Trans>
               </Link>
               <Link
                 onClick={() => handleNavigation("investment2")}
@@ -164,7 +165,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                rising fund
+                <Trans>rising fund</Trans>
               </Link>
               <Link
                 onClick={() => handleNavigation("team")}
@@ -173,7 +174,7 @@ const Nav = ({ whiteBackground, isHomePage }) => {
                 duration={2500}
                 offset={-140}
               >
-                team
+                <Trans>team nav</Trans>
               </Link>
               <LanguageDropdown
                 whiteBackground={whiteBackground && !scrollNav}
