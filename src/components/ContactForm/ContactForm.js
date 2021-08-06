@@ -4,6 +4,7 @@ import Select from "react-select";
 //styles
 import * as styles from "./styles.module.scss";
 import "./select.scss";
+import {Trans} from "react-i18next";
 
 // markup
 const ContactForm = () => {
@@ -22,12 +23,12 @@ const ContactForm = () => {
     <section id="contact" className={styles.form}>
       <div className={styles.innerWrapper}>
         <div className={styles.formHeader}>
-          <h3>inscription</h3>
-          <h5>Je souhaite être early investor</h5>
+          <h3>Early investor</h3>
+          <h5><Trans>Formulaire</Trans> </h5>
         </div>
         <form>
           <label className={styles.odd}>
-            Nom*
+            <Trans>Nom</Trans>*
             <input type="text" required placeholder="nom" />
           </label>
           <label>

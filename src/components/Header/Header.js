@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "react-scroll";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 //components
 import chevronDown from "../../images/chevron-down.svg";
@@ -16,14 +17,14 @@ const Header = () => {
         <Nav isHomePage />
 
         <div className={styles.headerText}>
-          <h3>Founded in 2021</h3>
+          <h3><Trans>Founded in 2021</Trans></h3>
           <h5>
             Saino
             <span> Ventures</span>
           </h5>
           <p>
-            Asset management firm in <br />
-            <span> Distributed Ledger Technologies</span>
+            <Trans>Asset management firm in</Trans><br />
+            <span> <Trans>Distributed Ledger Technologies</Trans></span>
           </p>
         </div>
 
@@ -36,7 +37,7 @@ const Header = () => {
           >
             <img src={chevronDown} alt="learn More" />
           </Link>
-          <span>En savoir plus</span>
+          <span><Trans>En savoir plus</Trans></span>
         </div>
       </div>
     </header>

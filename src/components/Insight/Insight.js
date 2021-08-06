@@ -27,44 +27,36 @@ const Insight = () => {
                 <Trans>Insight 01</Trans>
               </h5>
               <h3>
-                <Trans>Lorem ipsum dolor</Trans>
+                <Trans>DLT</Trans>
               </h3>
               <p>
                 <Trans>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  Insight text 1
                 </Trans>
               </p>
             </div>
             <div className={styles.carouselItem}>
               <h5>
-                <Trans>Insight 01</Trans>
+                <Trans>Insight 02</Trans>
               </h5>
               <h3>
                 {" "}
-                <Trans>Lorem ipsum dolor</Trans>
+                <Trans>Incubateur</Trans>
               </h3>
               <p>
-                <Trans>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
-                </Trans>
+                <Trans>Insight text 2</Trans>
               </p>
             </div>
             <div className={styles.carouselItem}>
               <h5>
-                <Trans>Insight 01</Trans>
+                <Trans>Croissance</Trans>
               </h5>
               <h3>
                 <Trans>Lorem ipsum dolor</Trans>
               </h3>
               <p>
                 <Trans>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  Insight text 3
                 </Trans>
               </p>
             </div>
@@ -78,43 +70,35 @@ const Insight = () => {
               <Trans>Insight 01</Trans>
             </h5>
             <h3>
-              <Trans>Lorem ipsum dolor</Trans>
+              <Trans>DLT</Trans>
             </h3>
             <p>
               <Trans>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
+                Insight text 1
               </Trans>
             </p>
           </div>
           <div className={styles.carouselItem}>
             <h5>
-              <Trans>Insight 01</Trans>
+              <Trans>Insight 02</Trans>
             </h5>
             <h3>
-              <Trans>Lorem ipsum dolor</Trans>
+              <Trans>Incubateur</Trans>
             </h3>
             <p>
-              <Trans>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </Trans>
+              <Trans>Insight text 2</Trans>
             </p>
           </div>
           <div className={styles.carouselItem}>
             <h5>
-              <Trans>Insight 01</Trans>
+              <Trans>Insight 03</Trans>
             </h5>
             <h3>
-              <Trans>Lorem ipsum dolor</Trans>
+              <Trans>Croissance</Trans>
             </h3>
             <p>
               <Trans>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
+                Insight text 3
               </Trans>
             </p>
           </div>

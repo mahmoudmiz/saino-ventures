@@ -16,10 +16,10 @@ const Team = () => {
       <div className={styles.innerWrapper}>
         <div className={styles.teamHeader}>
           <h3>
-            <Trans>TEAM</Trans>
+            <Trans>team</Trans>
           </h3>
           <h5>
-            <Trans>Lorem ipsum dolor sit amet consectetur adipis elit.</Trans>
+            Saino Ventures
           </h5>
         </div>
 
@@ -28,8 +28,8 @@ const Team = () => {
             <div className={styles.teamMember}>
               <img src={teamMember1} alt="team member" />
               <h3>
-                <Trans>Lorem ipsum</Trans> <br />
-                <Trans>LOREM IPSUM DOLOR</Trans>
+                <Trans>Vénérand Mutabazi</Trans> <br />
+                <Trans>Customer manager</Trans>
               </h3>
             </div>
           </Grow>
@@ -37,8 +37,8 @@ const Team = () => {
             <div className={styles.teamMember}>
               <img src={teamMember2} alt="team member" />
               <h3>
-                <Trans>Lorem ipsum</Trans> <br />
-                <Trans>LOREM IPSUM DOLOR</Trans>
+                <Trans>Joachim Yazigi</Trans> <br />
+                <Trans>CEO & Main trader</Trans>
               </h3>
             </div>
           </Grow>
@@ -46,8 +46,8 @@ const Team = () => {
             <div className={styles.teamMember}>
               <img src={teamMember2} alt="team member" />
               <h3>
-                <Trans>Lorem ipsum</Trans> <br />
-                <Trans>LOREM IPSUM DOLOR</Trans>
+                <Trans>Arnaud Turmes</Trans> <br />
+                <Trans>Administrative and financial manager</Trans>
               </h3>
             </div>
           </Grow>
