@@ -77,8 +77,8 @@ const Investment2 = () => {
           />
           <div className={styles.underSliderWrapper}>
             <span className={styles.sliderText}>
-              <Trans>objectif</Trans> <br />
-              <Trans>phase</Trans> 1
+              <Trans>lancement</Trans> <br />
+              <Trans>phase</Trans> 0
             </span>
             <span className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
@@ -86,7 +86,7 @@ const Investment2 = () => {
             </span>
             <span className={styles.sliderText}>
               <Trans>objectif</Trans> <br />
-              <Trans>phase</Trans> 1
+              <Trans>phase</Trans> 2
             </span>
           </div>
 
