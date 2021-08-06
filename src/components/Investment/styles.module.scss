@@ -17,7 +17,7 @@
   position: relative;
 
   &::after {
-    content: "investisseme";
+    content: "Investment";
     position: absolute;
     text-transform: uppercase;
     top: 130px;
@@ -233,6 +233,6 @@
 
 .listItemContent {
   position: relative;
-  padding: 20px;
+  padding: 5px 20px 20px 20px ;
   font-size: 14px;
 }

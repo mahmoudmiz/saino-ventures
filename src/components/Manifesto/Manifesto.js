@@ -40,10 +40,10 @@ const Manifesto = () => {
             </div>
 
             {/* only desktop*/}
-            <div className={styles.desktopContainer}>
+            <div style={{marginTop: "2rem"}}  className={styles.desktopContainer}>
               <div className={styles.carouselItem}>
-                <h3><Trans>DLT</Trans></h3>
-                <p>
+                <h3 style={{fontSize: "8px",marginBottom:"0"}}><Trans>DLT</Trans></h3>
+                <p style={{fontSize: "9px",lineHeight: "14px",maxWidth:"440px"}}>
                   <Trans>def 1</Trans>
                 </p>
               </div>
@@ -62,8 +62,8 @@ const Manifesto = () => {
         <div className={styles.mobileContainer}>
           <Carousel selectedItem={0} showThumbs={false}>
             <div className={styles.carouselItem}>
-              <h3><Trans>DLT</Trans></h3>
-              <p>
+              <h3 style={{fontSize: "8px",marginBottom:"0"}}><Trans>DLT</Trans></h3>
+              <p style={{fontSize: "9px",lineHeight: "14px"}}>
                 <Trans>def 1</Trans>
               </p>
             </div>

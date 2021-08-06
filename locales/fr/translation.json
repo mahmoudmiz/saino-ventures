@@ -32,7 +32,7 @@
     "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.": "Investissement au plus tôt. Une seed permet potentiellement d’obtenir le token au meilleur prix.",
     "TEAM": "TEAM",
     "En savoir plus": "En savoir plus",
-    "Founded in 2021": "Fsondée en 2021",
+    "Founded in 2021": "Fondée en 2021",
     "Asset management firm in": "Asset management firm in",
     "Distributed Ledger Technologies": "Distributed Ledger Technologies",
     "Manifesto": "Manifesto",
@@ -94,5 +94,7 @@
     "lancement": "lancement",
     "Ne représente aucunement un engagement": "Ne représente aucunement un engagement",
     "provenance": "Source principale des fonds",
-    "Champs obligatoires": "Champs obligatoires"
+    "Champs obligatoires": "Champs obligatoires",
+    "rising fund": "levée de fonds",
+    "team nav": "équipe"
 }
