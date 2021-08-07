@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import * as styles from "./styles.module.scss";
 
 // slider values
-const currentValue = 3000000; //change the current value here
+const currentValue = 100000; //change the current value here
 
 const start = 0;
 const end = 1000000;

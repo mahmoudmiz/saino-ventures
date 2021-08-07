@@ -49,10 +49,10 @@ const Insight = () => {
             </div>
             <div className={styles.carouselItem}>
               <h5>
-                <Trans>Croissance</Trans>
+                <Trans>Objectifs</Trans>
               </h5>
               <h3>
-                <Trans>Lorem ipsum dolor</Trans>
+                <Trans>Croissance & adoption</Trans>
               </h3>
               <p>
                 <Trans>
