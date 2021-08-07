@@ -4,6 +4,7 @@ module.exports = {
     title: "Saino Ventures",
   },
   plugins: [
+    'gatsby-plugin-htaccess',
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     {
