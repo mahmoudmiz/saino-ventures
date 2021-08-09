@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 //components
 import Nav from "../../components/Nav/Nav";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import Footer from "../../components/Footer/Footer";
 
 //styles
 import "./index.scss";
@@ -14,6 +15,7 @@ const ContactPage = () => {
     <main>
       <Nav whiteBackground />
       <ContactForm />
+      <Footer />
     </main>
   );
 };

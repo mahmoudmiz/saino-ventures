@@ -26,15 +26,8 @@
     color: $black2;
     animation-duration: 5s;
     animation-name: slideinRight;
-    display: inline-block;
     left: -35px;
-    top: 280px;
-  }
-
-  @media (min-width: 360px) {
-    &::after {
-      top: 215px;
-    }
+    top: 180px;
   }
 
   @media (min-width: $breakpointTablet) {
@@ -154,13 +147,12 @@
 }
 
 .contentWrapper {
-  margin-top: 5rem;
+  margin-top: 4rem;
   video {
     max-width: 440px;
     width: 100%;
     height: 100%;
     margin-bottom: 3rem;
-    margin-top: 2rem;
   }
   @media (min-width: $breakpointTablet) {
     display: flex;

@@ -1,7 +1,7 @@
 @use '../../styles/variables' as *;
 
 .form {
-  padding: 241px 2rem 80px 2rem;
+  padding: 191px 2rem 80px 2rem;
 }
 
 .innerWrapper {
@@ -122,8 +122,13 @@ form {
     font-size: 14px;
     line-height: 24px;
     color: $grey6;
-    margin-top: 24px;
     width: 100%;
+    margin-top: -10px;
+    margin-bottom: 2rem;
+
+    @media (min-width: $breakpointTablet) {
+      margin-top: initial;
+    }
   }
 
   .amountInput {
@@ -149,7 +154,7 @@ form {
     button {
       display: block;
       width: 100%;
-      margin: 100px auto 0 auto;
+      margin: 80px auto 0 auto;
       max-width: 307px;
     }
   }

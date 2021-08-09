@@ -27,10 +27,9 @@ header {
 .learnMore {
   display: flex;
   position: absolute;
-  bottom: 3vh;
-
-  a {
-    cursor: pointer;
+  top: 91vh;
+  cursor: pointer;
+  .learnMoreButton {
     border-radius: 50%;
     color: white;
     width: 32px;

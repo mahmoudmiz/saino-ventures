@@ -17,28 +17,38 @@ const Header = () => {
         <Nav isHomePage />
 
         <div className={styles.headerText}>
-          <h3><Trans>Founded in 2021</Trans></h3>
+          <h3>
+            <Trans>Founded in 2021</Trans>
+          </h3>
           <h5>
             Saino
             <span> Ventures</span>
           </h5>
           <p>
-            <Trans>Asset management firm in</Trans><br />
-            <span> <Trans>Distributed Ledger Technologies</Trans></span>
+            <Trans>Asset management firm in</Trans>
+            <br />
+            <span>
+              {" "}
+              <Trans>Distributed Ledger Technologies</Trans>
+            </span>
           </p>
         </div>
 
-        <div className={styles.learnMore}>
-          <Link
-            to="investment"
-            smooth="easeOutSine"
-            duration={2500}
-            offset={-140}
-          >
-            <img src={chevronDown} alt="learn More" />
-          </Link>
-          <span><Trans>En savoir plus</Trans></span>
-        </div>
+        <Link
+          to="investment"
+          smooth="easeOutSine"
+          duration={2500}
+          offset={-140}
+        >
+          <div className={styles.learnMore}>
+            <span className={styles.learnMoreButton}>
+              <img src={chevronDown} alt="learn More" />
+            </span>
+            <span>
+              <Trans>En savoir plus</Trans>
+            </span>
+          </div>
+        </Link>
       </div>
     </header>
   );

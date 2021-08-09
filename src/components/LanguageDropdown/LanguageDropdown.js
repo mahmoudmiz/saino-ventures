@@ -14,7 +14,7 @@ const LanguageDropdown = ({ whiteBackground }) => {
 
   return (
     <ClickAwayListener onClickAway={() => setShowOptions(false)}>
-      <Collapse in={showOptions} collapsedSize={isMobile ? 40 : 19}>
+      <Collapse in={showOptions} collapsedSize={40}>
         <div
           className={`${styles.changeLanguage} ${
             showOptions ? styles.active : ""
