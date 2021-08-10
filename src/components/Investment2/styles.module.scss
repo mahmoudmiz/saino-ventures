@@ -145,6 +145,7 @@
 }
 
 .sliderContainer {
+  position: relative;
   text-align: center;
   .sliderRange {
     display: flex;
@@ -155,7 +156,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     span:nth-of-type(2) {
-      margin-left: 14px;
+      position: absolute;
     }
   }
 
@@ -166,7 +167,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     &::first-line {
       color: $purple;
       font-weight: 700;

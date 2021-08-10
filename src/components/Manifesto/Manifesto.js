@@ -15,8 +15,12 @@ const Manifesto = () => {
     <section id="manifesto" className={styles.manifesto}>
       <div className={styles.innerWrapper}>
         <div className={styles.manifestoBlock}>
-          <h5><Trans>Manifesto</Trans></h5>
-          <h3><Trans>Architecture,DeFi et NFT's</Trans></h3>
+          <h5>
+            <Trans>Manifesto</Trans>
+          </h5>
+          <h3>
+            <Trans>Architecture,DeFi et NFT's</Trans>
+          </h3>
           <p>
             <Trans>Text manifesto 1</Trans>
           </p>
@@ -26,24 +30,40 @@ const Manifesto = () => {
             loop
             autoPlay
             muted
+            playsinline
             src={Video_ILLUSTRATION}
             type="video/mp4"
           />
 
           <div className={styles.rightWrapper}>
             <div className={styles.manifestoBlock}>
-              <h5><Trans>Manifesto</Trans></h5>
-              <h3><Trans>Intéropérabilité</Trans></h3>
+              <h5>
+                <Trans>Manifesto</Trans>
+              </h5>
+              <h3>
+                <Trans>Intéropérabilité</Trans>
+              </h3>
               <p>
                 <Trans>Text manifesto 2</Trans>
               </p>
             </div>
 
             {/* only desktop*/}
-            <div style={{marginTop: "2rem"}}  className={styles.desktopContainer}>
+            <div
+              style={{ marginTop: "2rem" }}
+              className={styles.desktopContainer}
+            >
               <div className={styles.carouselItem}>
-                <h3 style={{fontSize: "8px",marginBottom:"0"}}><Trans>DLT</Trans></h3>
-                <p style={{fontSize: "9px",lineHeight: "14px",maxWidth:"440px"}}>
+                <h3 style={{ fontSize: "8px", marginBottom: "0" }}>
+                  <Trans>DLT</Trans>
+                </h3>
+                <p
+                  style={{
+                    fontSize: "9px",
+                    lineHeight: "14px",
+                    maxWidth: "440px",
+                  }}
+                >
                   <Trans>def 1</Trans>
                 </p>
               </div>
@@ -62,8 +82,10 @@ const Manifesto = () => {
         <div className={styles.mobileContainer}>
           <Carousel selectedItem={0} showThumbs={false}>
             <div className={styles.carouselItem}>
-              <h3 style={{fontSize: "8px",marginBottom:"0"}}><Trans>DLT</Trans></h3>
-              <p style={{fontSize: "9px",lineHeight: "14px"}}>
+              <h3 style={{ fontSize: "8px", marginBottom: "0" }}>
+                <Trans>DLT</Trans>
+              </h3>
+              <p style={{ fontSize: "9px", lineHeight: "14px" }}>
                 <Trans>def 1</Trans>
               </p>
             </div>

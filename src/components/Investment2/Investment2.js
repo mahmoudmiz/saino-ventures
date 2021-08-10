@@ -8,10 +8,17 @@ import * as styles from "./styles.module.scss";
 
 // slider values
 const currentValue = 50000; //change the current value here
-
+const step1 = 200000;
 const start = 0;
 const end = 1000000;
 
+const normalizeNumber = (number) => {
+  if (number >= 1000000) {
+    return `${number / 1000000}M`;
+  } else {
+    return `${number / 1000}K`;
+  }
+};
 // markup
 const Investment2 = () => {
   const [value, setValue] = React.useState(currentValue);
@@ -40,20 +47,20 @@ const Investment2 = () => {
           </div>
           <div className={styles.innerWrapper}>
             <div>
-              <h5>{value === end ? "1M $" : `${value / 1000}k $`}</h5>
+              <h5>{normalizeNumber(value)} $</h5>
               <p>
                 <Trans>montant investit actuel</Trans>
               </p>
             </div>
             <div>
-              <h5>100K $</h5>
+              <h5>{normalizeNumber(100000)} $</h5>
               <p>
                 <Trans>Investissement min actuel</Trans>
               </p>
             </div>
 
             <div>
-              <h5>90K $</h5>
+              <h5>{normalizeNumber(90000)} $</h5>
               <p>
                 <Trans>Investissement min suivant</Trans>
               </p>
@@ -63,8 +70,16 @@ const Investment2 = () => {
         <div className={styles.sliderContainer}>
           <div className={styles.sliderRange}>
             <span>0</span>
-            <span>200K $</span>
-            <span>1M $</span>
+            <span
+              className={styles.sliderRangeFloating}
+              style={{
+                left: `${(step1 / end) * 100}%`,
+                transform: `translate(-${(step1 / end) * 100}%)`,
+              }}
+            >
+              {normalizeNumber(200000)} $
+            </span>
+            <span>{normalizeNumber(1000000)} $</span>
           </div>
 
           <Slider
@@ -76,15 +91,29 @@ const Investment2 = () => {
             className={styles.slider}
           />
           <div className={styles.underSliderWrapper}>
-            <span style={{textAlign:'left',marginTop: "1rem"}} className={styles.sliderText}>
+            <span
+              style={{ textAlign: "left", marginTop: "1rem" }}
+              className={styles.sliderText}
+            >
               <Trans>lancement</Trans> <br />
               <Trans>phase</Trans> 0
             </span>
-            <span style={{marginTop: "1rem"}} className={styles.sliderText}>
+            <span
+              style={{
+                marginTop: "1rem",
+                position: "absolute",
+                left: `${(step1 / end) * 100}%`,
+                transform: `translate(-${(step1 / end) * 100}%)`,
+              }}
+              className={styles.sliderText}
+            >
               <Trans>objectif</Trans> <br />
               <Trans>phase</Trans> 1
             </span>
-            <span style={{textAlign:'right',marginTop: "1rem"}} className={styles.sliderText}>
+            <span
+              style={{ textAlign: "right", marginTop: "1rem" }}
+              className={styles.sliderText}
+            >
               <Trans>objectif</Trans> <br />
               <Trans>phase</Trans> 2
             </span>

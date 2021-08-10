@@ -84,7 +84,10 @@ const Investment = () => {
                 <Trans>Seed</Trans>
               </h5>
               <h3>
-                <Trans>Highest time perspective & risk highest potential reward</Trans> <br />
+                <Trans>
+                  Highest time perspective & risk highest potential reward
+                </Trans>{" "}
+                <br />
                 <Trans>Highest reward</Trans>
               </h3>
               <p>
