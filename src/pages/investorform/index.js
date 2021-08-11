@@ -3,21 +3,24 @@ import { graphql } from "gatsby";
 
 //components
 import Nav from "../../components/Nav/Nav";
-import Contactform from "../../components/Contactform/Contactform";
+import Investorform from "../../components/Investorform/Investorform";
 import Footer from "../../components/Footer/Footer";
 
+//styles
+import "./index.scss";
+
 // markup
-const ContactPage = () => {
+const InvestorformPage = () => {
   return (
     <main>
       <Nav whiteBackground />
-      <Contactform />
+      <Investorform />
       <Footer />
     </main>
   );
 };
 
-export default ContactPage;
+export default InvestorformPage;
 
 export const query = graphql`
   query ($language: String!) {

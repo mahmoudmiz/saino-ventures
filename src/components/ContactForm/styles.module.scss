@@ -1,15 +1,41 @@
 @use '../../styles/variables' as *;
 
-.form {
+.contactform {
   padding: 191px 2rem 80px 2rem;
 }
 
 .innerWrapper {
+  position: relative;
   max-width: $maxwidth;
   margin: 0 auto;
 
   @media (min-width: $breakpointTablet) {
     padding: 0;
+  }
+
+  &::after {
+    content: "Contact";
+    font-weight: bold;
+    position: absolute;
+    font-size: 100px;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: $black2;
+    animation-duration: 5s;
+    animation-name: slideinRight;
+    left: -35px;
+    top: 100px;
+    z-index: -1;
+    color: $white2;
+  }
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+    &::after {
+      top: 50px;
+      font-size: 200px;
+      left: 30%;
+    }
   }
 }
 
@@ -31,144 +57,86 @@
     color: black;
   }
 }
-form {
+.contactCards {
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-
-  label {
+  justify-content: start;
+  align-items: center;
+  margin: 80px auto;
+  .contactCard {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    align-items: center;
+    height: 163px;
+    padding: 37px;
+    background: #ffffff;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
+
+    &:nth-of-type(1) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
 
     span {
-      font-weight: 400;
+      display: block;
+    }
+
+    span:nth-of-type(1) {
+      font-size: 24px;
+      line-height: 24px;
+      position: relative;
+
+      &::after {
+        background: black;
+        position: absolute;
+        content: "";
+        top: 35px;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: 40px;
+        height: 2px;
+      }
+    }
+
+    span:nth-of-type(2) {
       font-size: 14px;
       line-height: 24px;
-      padding-top: 12px;
-      text-transform: none;
-      color: $grey6;
-    }
-
-    @media (min-width: $breakpointTablet) {
-      width: 555px;
-    }
-  }
-
-  input,
-  textarea {
-    margin-top: 8px;
-    height: 48px;
-    border: 1px solid $grey3;
-    border-radius: 4px;
-    padding: 17px 20px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-transform: none;
-    color: $black5;
-    outline: none;
-    &:focus,
-    &:active {
-      border: 2px solid $purple;
-    }
-
-    &::placeholder {
-      color: $black7;
-      text-transform: uppercase;
-    }
-  }
-
-  textarea {
-    height: 140px;
-    resize: none;
-
-    &:focus,
-    &:active {
-      border: 2px solid $purple;
-    }
-  }
-
-  button {
-    background: transparent;
-    cursor: pointer;
-    border: 2px solid $purple;
-    border-radius: 8px;
-    padding: 17px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    &:hover,
-    &:active {
-      background: #141414;
-      border: 2px solid #141414;
-      opacity: 0.7;
-      transition: all 0.3s ease-in-out;
-      color: white;
-    }
-  }
-
-  .formTextBottom {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: $grey6;
-    width: 100%;
-    margin-top: -10px;
-    margin-bottom: 2rem;
-
-    @media (min-width: $breakpointTablet) {
-      margin-top: initial;
-    }
-  }
-
-  .amountInput {
-    position: relative;
-
-    &::after {
-      content: "$";
-      position: absolute;
-      right: 20px;
-      top: 40px;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      color: $black4;
+      margin-top: 2rem;
     }
   }
 
   @media (min-width: $breakpointTablet) {
     flex-direction: row;
-    flex-wrap: wrap;
 
-    button {
-      display: block;
-      width: 100%;
-      margin: 80px auto 0 auto;
-      max-width: 307px;
+    .contactCard:nth-of-type(1) {
+      margin-right: 20px;
+      margin-bottom: 0;
     }
   }
+}
 
-  @media (min-width: 1200px) {
-    .odd {
-      input,
-      textarea {
-        margin-right: 20px;
-      }
+@media (min-width: 1200px) {
+  .odd {
+    input,
+    textarea {
+      margin-right: 20px;
     }
+  }
+}
 
-    .amountInput::after {
-      right: 40px;
-    }
+.formTextBottom {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $grey6;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 2rem;
+
+  @media (min-width: $breakpointTablet) {
+    margin-top: initial;
   }
 }

@@ -1,0 +1,174 @@
+@use '../../styles/variables' as *;
+
+.form {
+  padding: 191px 2rem 80px 2rem;
+}
+
+.innerWrapper {
+  max-width: $maxwidth;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+  }
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+  h3 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $purple;
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 12px;
+      text-transform: none;
+      color: $grey6;
+    }
+
+    @media (min-width: $breakpointTablet) {
+      width: 555px;
+    }
+  }
+
+  input,
+  textarea {
+    margin-top: 8px;
+    height: 48px;
+    border: 1px solid $grey3;
+    border-radius: 4px;
+    padding: 17px 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: none;
+    color: $black5;
+    outline: none;
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+    }
+
+    &::placeholder {
+      color: $black7;
+      text-transform: uppercase;
+    }
+  }
+
+  textarea {
+    height: 140px;
+    resize: none;
+
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+    }
+  }
+
+  button {
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid $purple;
+    border-radius: 8px;
+    padding: 17px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active {
+      background: #141414;
+      border: 2px solid #141414;
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+      color: white;
+    }
+  }
+
+  .formTextBottom {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $grey6;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 2rem;
+
+    @media (min-width: $breakpointTablet) {
+      margin-top: initial;
+    }
+  }
+
+  .amountInput {
+    position: relative;
+
+    &::after {
+      content: "$";
+      position: absolute;
+      right: 20px;
+      top: 40px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: $breakpointTablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 80px auto 0 auto;
+      max-width: 307px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .odd {
+      input,
+      textarea {
+        margin-right: 20px;
+      }
+    }
+
+    .amountInput::after {
+      right: 40px;
+    }
+  }
+}

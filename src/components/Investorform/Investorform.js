@@ -1,13 +1,23 @@
 import * as React from "react";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Select from "react-select";
 
 //styles
 import * as styles from "./styles.module.scss";
+import "./select.scss";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 // markup
-const Contactform = () => {
+const Investorform = () => {
   const { t } = useTranslation();
+
+  const providenceOptions = [
+    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaire"), label: t("Salaire") },
+  ];
 
   const languagesOptions = [
     { value: t("Français"), label: t("Français") },
@@ -15,31 +25,13 @@ const Contactform = () => {
   ];
 
   return (
-    <section id="Contactform" className={styles.contactform}>
+    <section id="Investorform" className={styles.form}>
       <div className={styles.innerWrapper}>
         <div className={styles.formHeader}>
-          <h3>Entrez En Contact</h3>
+          <h3>Early investor</h3>
           <h5>
-            Nous serons heureux <br />
-            de vous aider !
+            <Trans>Formulaire</Trans>{" "}
           </h5>
-        </div>
-
-        <section className={styles.contactCards}>
-          <div className={styles.contactCard}>
-            <span>Email</span>
-            <span>contact@saino.ventures</span>
-          </div>
-
-          <div className={styles.contactCard}>
-            <span>Siège social</span>
-            <span>Creative Tower P.O.Box 4422 Fujairah, Dubai - UAE </span>
-          </div>
-        </section>
-
-        <div className={styles.formHeader}>
-          <h3>Contact</h3>
-          <h5>Travaillons ensemble.</h5>
         </div>
         <form>
           <label className={styles.odd}>
@@ -58,7 +50,29 @@ const Contactform = () => {
             <Trans>Numéro de Téléphone</Trans>
             <input type="tel" placeholder={t("Numéro de Téléphone")} />
           </label>
+          <label className={`${styles.odd} ${styles.amountInput}`}>
+            <Trans>Montant de l'investissement souhaité</Trans>*
+            <input type="text" required placeholder="0" />
+            <span>
+              <Trans>Ne représente aucunement un engagement</Trans>.
+            </span>
+          </label>
 
+          <label>
+            <Trans>provenance</Trans>
+            <Select
+              options={providenceOptions}
+              placeholder={t("salary")}
+              className="selectContainer"
+              classNamePrefix="select"
+            />
+            <span>
+              <Trans>
+                Les document attestant la provenance des fonds seront demandés
+              </Trans>
+              .
+            </span>
+          </label>
           <label className={styles.odd}>
             <Trans>Message</Trans>
             <textarea placeholder={t("Commentaires et questions éventuels")} />
@@ -86,4 +100,4 @@ const Contactform = () => {
   );
 };
 
-export default Contactform;
+export default Investorform;

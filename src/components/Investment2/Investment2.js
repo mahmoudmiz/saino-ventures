@@ -119,7 +119,7 @@ const Investment2 = () => {
             </span>
           </div>
 
-          <Link to="/contact">
+          <Link to="/investorform">
             <Trans>Je souhaite être early investor</Trans>
           </Link>
         </div>
