@@ -5,11 +5,17 @@ import { graphql } from "gatsby";
 import Nav from "../../components/Nav/Nav";
 import Contactform from "../../components/Contactform/Contactform";
 import Footer from "../../components/Footer/Footer";
+import {Helmet} from "react-helmet";
 
 // markup
 const ContactPage = () => {
   return (
     <main>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>{"Contact | Saino Ventures"}</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
       <Nav whiteBackground />
       <Contactform />
       <Footer />

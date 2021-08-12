@@ -7,11 +7,17 @@ import Confirmation from "../../components/Confirmation/Confirmation";
 import Footer from "../../components/Footer/Footer";
 //styles
 import "./index.scss";
+import {Helmet} from "react-helmet";
 
 // markup
 const ConfirmationPage = () => {
   return (
     <main>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>{"Confirmation | Saino Ventures"}</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
       <Nav whiteBackground />
       <Confirmation />
       <Footer />
