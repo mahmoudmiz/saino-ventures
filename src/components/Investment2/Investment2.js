@@ -71,7 +71,7 @@ const Investment2 = () => {
           <div className={styles.sliderRange}>
             <span>0</span>
             <span
-              className={styles.sliderRangeFloating}
+              //className={styles.sliderRangeFloating}
               style={{
                 left: `${(step1 / end) * 100}%`,
                 transform: `translate(-${(step1 / end) * 100}%)`,

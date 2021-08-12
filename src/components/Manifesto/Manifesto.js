@@ -35,7 +35,7 @@ const Manifesto = () => {
             type="video/mp4"
           />
 
-          <div className={styles.rightWrapper}>
+          <div /*className={styles.rightWrapper}*/>
             <div className={styles.manifestoBlock}>
               <h5>
                 <Trans>Manifesto</Trans>
