@@ -1,18 +1,58 @@
-import * as React from "react";
+import React, {useState} from 'react';
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Select from "react-select";
+import axios from 'axios';
 
 //styles
 import * as styles from "./styles.module.scss";
+import {MAIL_SERVER_ROUTE, RECEPTION_EMAIL} from "../../utils";
 
 // markup
 const Contactform = () => {
+  const [name, setName] = useState('');
+  const [companyName, setcompanyName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   const { t } = useTranslation();
 
   const languagesOptions = [
     { value: t("Français"), label: t("Français") },
     { value: t("Anglais"), label: t("Anglais") },
   ];
+
+  const sendForm = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const body = `
+    from: /contact
+    Name: ${name}\n
+    Company:${companyName?companyName:"n.a."}\n
+    E-mail:${email}\n
+    Phone:${phone?phone:"n.a."}\n\n
+    ${message}        
+    `
+    const data = {
+      emailFrom: email,
+      emailTo: RECEPTION_EMAIL,
+      subject:`contact ${name}`,
+      message: body
+    };
+    /*axios.post(MAIL_SERVER_ROUTE,data)
+        .then(res => {
+          console.log(res.data,"success");
+          setIsLoading(false)
+        })
+        .catch(err => {
+          setIsLoading(false)
+          if (err.response) {
+            console.log( err.response.data,'error')
+          }else console.log(err);
+        })*/
+    console.log('send form',data)
+  }
 
   return (
     <section id="Contactform" className={styles.contactform}>
@@ -42,28 +82,43 @@ const Contactform = () => {
             <Trans>Avec notre équipe</Trans><br />
           </h5>
         </div>}
-        <form>
+        <form onSubmit={e => sendForm(e)}>
           <label className={styles.odd}>
             <Trans>nom complet</Trans>*
-            <input type="text" required placeholder={t("nom complet")} />
+            <input type="text" required placeholder={t("nom complet")}
+                   value={name}
+                   onChange={e => setName(e.target.value)}
+            />
           </label>
           <label>
             <Trans>Dénomination de l'entreprise</Trans>
-            <input type="text" required placeholder={t("Dénomination de l'entreprise")} />
+            <input type="text" placeholder={t("Dénomination de l'entreprise")}
+                   value={companyName}
+                   onChange={e => setcompanyName(e.target.value)}
+            />
           </label>
           <label className={styles.odd}>
             <Trans>Adresse mail</Trans>*
-            <input type="email" required placeholder={t("Adresse mail")} />
+            <input type="email" autoComplete={"on"} required placeholder={t("Adresse mail")}
+                   value={email}
+                   onChange={e => setEmail(e.target.value)}
+            />
           </label>
           <label>
             <Trans>Numéro de Téléphone</Trans>
-            <input type="tel" placeholder={t("Numéro de Téléphone")} />
+            <input type="tel" placeholder={t("Numéro de Téléphone")}
+                   value={phone}
+                   onChange={e => setPhone(e.target.value)}
+            />
           </label>
 
 
           <label className={styles.odd}>
             <Trans>Message</Trans>
-            <textarea placeholder={t("Message")} />
+            <textarea placeholder={t("Message")}
+                      value={message}
+                      onChange={e => setMessage(e.target.value)}
+            />
           </label>
 
           {/*<label>

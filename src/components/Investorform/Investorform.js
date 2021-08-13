@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from 'react';
 import Select from "react-select";
 
 //styles
@@ -8,6 +8,16 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 // markup
 const Investorform = () => {
+  const [name, setName] = useState('');
+  const [companyName, setcompanyName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [amount, setAmount] = useState('');
+  const [source, setSource] = useState('');
+  const [languageDesired, setLanguageDesired] = useState('');
+
+
   const { t } = useTranslation();
 
   const providenceOptions = [
@@ -36,24 +46,34 @@ const Investorform = () => {
         <form>
           <label className={styles.odd}>
             <Trans>nom complet</Trans>*
-            <input type="text" required placeholder={t("nom complet")} />
+            <input type="text" required placeholder={t("nom complet")}
+                   value={name}
+                   onChange={e => setName(e.target.value)}/>
           </label>
           <label>
             <Trans>Dénomination de l'entreprise</Trans>
-            <input type="text" required placeholder={t("Dénomination de l'entreprise")} />
+            <input type="text" required placeholder={t("Dénomination de l'entreprise")}
+                   value={companyName}
+                   onChange={e => setcompanyName(e.target.value)}/>
           </label>
           <label className={styles.odd}>
             <Trans>Adresse mail</Trans>*
-            <input type="email" required placeholder={t("Adresse mail")} />
+            <input type="email" required placeholder={t("Adresse mail")}
+                   value={email}
+                   onChange={e => setEmail(e.target.value)}/>
           </label>
           <label>
             <Trans>Numéro de Téléphone</Trans>
-            <input type="tel" placeholder={t("Numéro de Téléphone")} />
+            <input type="tel" placeholder={t("Numéro de Téléphone")}
+                   value={phone}
+                   onChange={e => setPhone(e.target.value)}/>
           </label>
 
           <label className={`${styles.odd} ${styles.amountInput}`}>
             <Trans>Montant de l'investissement souhaité</Trans>*
-            <input type="text" required placeholder="0" />
+            <input type="text" required placeholder="0"
+                   value={amount}
+                   onChange={e => setAmount(e.target.value)}/>
             <span>
               <Trans>Ne représente aucunement un engagement</Trans>.
             </span>
@@ -62,10 +82,11 @@ const Investorform = () => {
           <label>
             <Trans>provenance</Trans>
             <Select
-              options={providenceOptions}
-              placeholder={t("salary")}
-              className="selectContainer"
-              classNamePrefix="select"
+                onChange={e => setSource(e.value)}
+                options={providenceOptions}
+                placeholder={t("salary")}
+                className="selectContainer"
+                classNamePrefix="select"
             />
             <span>
               <Trans>
@@ -77,12 +98,15 @@ const Investorform = () => {
 
           <label className={styles.odd}>
             <Trans>Message</Trans>
-            <textarea placeholder={t("Commentaires et questions éventuels")} />
+            <textarea placeholder={t("Commentaires et questions éventuels")}
+                      value={message}
+                      onChange={e => setMessage(e.target.value)}/>
           </label>
 
           <label>
             <Trans>Langue de communication souhaitée</Trans>
             <Select
+                onChange={e => setLanguageDesired(e.value)}
                 options={languagesOptions}
                 placeholder={t("Français")}
                 className="selectContainer"
