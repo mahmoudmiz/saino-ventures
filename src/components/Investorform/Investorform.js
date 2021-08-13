@@ -35,12 +35,12 @@ const Investorform = () => {
         </div>
         <form>
           <label className={styles.odd}>
-            <Trans>Prénom</Trans>*
-            <input type="text" required placeholder={t("Prénom")} />
+            <Trans>nom complet</Trans>*
+            <input type="text" required placeholder={t("nom complet")} />
           </label>
           <label>
-            <Trans>Nom</Trans>*
-            <input type="text" required placeholder={t("Nom")} />
+            <Trans>Dénomination de l'entreprise</Trans>
+            <input type="text" required placeholder={t("Dénomination de l'entreprise")} />
           </label>
           <label className={styles.odd}>
             <Trans>Adresse mail</Trans>*
@@ -50,6 +50,7 @@ const Investorform = () => {
             <Trans>Numéro de Téléphone</Trans>
             <input type="tel" placeholder={t("Numéro de Téléphone")} />
           </label>
+
           <label className={`${styles.odd} ${styles.amountInput}`}>
             <Trans>Montant de l'investissement souhaité</Trans>*
             <input type="text" required placeholder="0" />
@@ -73,6 +74,7 @@ const Investorform = () => {
               .
             </span>
           </label>
+
           <label className={styles.odd}>
             <Trans>Message</Trans>
             <textarea placeholder={t("Commentaires et questions éventuels")} />
@@ -81,12 +83,13 @@ const Investorform = () => {
           <label>
             <Trans>Langue de communication souhaitée</Trans>
             <Select
-              options={languagesOptions}
-              placeholder={t("Français")}
-              className="selectContainer"
-              classNamePrefix="select"
+                options={languagesOptions}
+                placeholder={t("Français")}
+                className="selectContainer"
+                classNamePrefix="select"
             />
           </label>
+
 
           <div className={styles.formTextBottom}>
             (*) <Trans>Champs obligatoires</Trans>

@@ -17,38 +17,39 @@ const Contactform = () => {
   return (
     <section id="Contactform" className={styles.contactform}>
       <div className={styles.innerWrapper}>
-        <div className={styles.formHeader}>
-          <h3>Entrez En Contact</h3>
+        {/*<div className={styles.formHeader}>
+          <h3><Trans>Entrez en contact</Trans></h3>
           <h5>
-            Nous serons heureux <br />
-            de vous aider !
+            <Trans>Avec notre équipe</Trans><br />
           </h5>
-        </div>
+        </div>*/}
 
         <section className={styles.contactCards}>
           <div className={styles.contactCard}>
             <span>Email</span>
-            <span>contact@saino.ventures</span>
+            <span>contact@sainoventures.com</span>
           </div>
 
           <div className={styles.contactCard}>
-            <span>Siège social</span>
+            <span><Trans>Siège social</Trans></span>
             <span>Creative Tower P.O.Box 4422 Fujairah, Dubai - UAE </span>
           </div>
         </section>
 
-        <div className={styles.formHeader}>
-          <h3>Contact</h3>
-          <h5>Travaillons ensemble.</h5>
-        </div>
+        {<div className={styles.formHeader}>
+          <h3><Trans>Entrez en contact</Trans></h3>
+          <h5>
+            <Trans>Avec notre équipe</Trans><br />
+          </h5>
+        </div>}
         <form>
           <label className={styles.odd}>
-            <Trans>Prénom</Trans>*
-            <input type="text" required placeholder={t("Prénom")} />
+            <Trans>nom complet</Trans>*
+            <input type="text" required placeholder={t("nom complet")} />
           </label>
           <label>
-            <Trans>Nom</Trans>*
-            <input type="text" required placeholder={t("Nom")} />
+            <Trans>Dénomination de l'entreprise</Trans>
+            <input type="text" required placeholder={t("Dénomination de l'entreprise")} />
           </label>
           <label className={styles.odd}>
             <Trans>Adresse mail</Trans>*
@@ -59,12 +60,13 @@ const Contactform = () => {
             <input type="tel" placeholder={t("Numéro de Téléphone")} />
           </label>
 
+
           <label className={styles.odd}>
             <Trans>Message</Trans>
-            <textarea placeholder={t("Commentaires et questions éventuels")} />
+            <textarea placeholder={t("Message")} />
           </label>
 
-          <label>
+          {/*<label>
             <Trans>Langue de communication souhaitée</Trans>
             <Select
               options={languagesOptions}
@@ -72,13 +74,13 @@ const Contactform = () => {
               className="selectContainer"
               classNamePrefix="select"
             />
-          </label>
+          </label>*/}
 
           <div className={styles.formTextBottom}>
             (*) <Trans>Champs obligatoires</Trans>
           </div>
           <button>
-            <Trans>Envoyer la demande</Trans>
+            <Trans>Envoyer</Trans>
           </button>
         </form>
       </div>
