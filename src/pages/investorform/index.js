@@ -19,7 +19,7 @@ const InvestorformPage = () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>{t("Investor form")+" | Saino Ventures"}</title>
-            <link rel="canonical" href="http://mysite.com/example" />
+            <link rel="canonical" href="https://sainoventures.com" />
         </Helmet>
       <Nav whiteBackground />
       <Investorform />

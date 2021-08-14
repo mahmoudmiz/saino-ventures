@@ -21,12 +21,14 @@ const Investorform = () => {
   const { t } = useTranslation();
 
   const providenceOptions = [
-    { value: t("Salaire"), label: t("Salaire") },
-    { value: t("Salaire"), label: t("Salaire") },
-    { value: t("Salaire"), label: t("Salaire") },
-    { value: t("Salaire"), label: t("Salaire") },
-    { value: t("Salaire"), label: t("Salaire") },
-    { value: t("Salaire"), label: t("Salaire") },
+    { value: t("Salaires"), label: t("Salaires") },
+    { value: t("Trading"), label: t("Trading") },
+    { value: t("Dividendes"), label: t("Dividendes") },
+    { value: t("Rentes"), label: t("Rentes") },
+    { value: t("Pensions"), label: t("Pensions") },
+    { value: t("Héritage"), label: t("Héritage") },
+    { value: t("Combinaison"), label: t("Combinaison") },
+    { value: t("Autres"), label: t("Autres") },
   ];
 
   const languagesOptions = [

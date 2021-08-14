@@ -23,7 +23,7 @@ const IndexPage = () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>{"Saino Ventures | "+t('Blockchain Investment Fund')}</title>
-            <link rel="canonical" href="http://mysite.com/example" />
+            <link rel="canonical" href="https://sainoventures.com" />
         </Helmet>
       <Header />
       <Insight />

@@ -14,7 +14,7 @@ const ContactPage = () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>{"Contact | Saino Ventures"}</title>
-            <link rel="canonical" href="http://mysite.com/example" />
+            <link rel="canonical" href="https://sainoventures.com" />
         </Helmet>
       <Nav whiteBackground />
       <Contactform />
