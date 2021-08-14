@@ -1,24 +1,28 @@
 import React, {useState} from 'react';
 import Select from "react-select";
+import axios from 'axios';
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import {RECEPTION_EMAIL,MAIL_SERVER_ROUTE} from "../../utils";
 
 //styles
 import * as styles from "./styles.module.scss";
 import "./select.scss";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+
 
 // markup
 const Investorform = () => {
+  const { t } = useTranslation();
+
   const [name, setName] = useState('');
   const [companyName, setcompanyName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [amount, setAmount] = useState('');
-  const [source, setSource] = useState('');
-  const [languageDesired, setLanguageDesired] = useState('');
-
-
-  const { t } = useTranslation();
+  const [source, setSource] = useState(t("Salaires"));
+  const [languageDesired, setLanguageDesired] = useState(t("Français"));
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage,setErrorMessage] = useState('');
 
   const providenceOptions = [
     { value: t("Salaires"), label: t("Salaires") },
@@ -36,6 +40,43 @@ const Investorform = () => {
     { value: t("Anglais"), label: t("Anglais") },
   ];
 
+  const sendForm = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const body = `
+    from: /investorform
+    Name: ${name}
+    Company: ${companyName?companyName:"n.a."}
+    E-mail: ${email}
+    Amount: ${amount}
+    Source: ${source}
+    Language Desired: ${languageDesired}
+    Phone: ${phone?phone:"n.a."}
+    
+    
+    ${message}        
+    `
+    const data = {
+      emailFrom: email,
+      emailTo: RECEPTION_EMAIL,
+      subject:`contact ${name}`,
+      message: body
+    };
+    axios.post(MAIL_SERVER_ROUTE,data)
+        .then(res => {
+          console.log(res.data,"success");
+          setIsLoading(false)
+          window.location.href = '/confirmation';
+        })
+        .catch(err => {
+          setIsLoading(false)
+          setErrorMessage("Erreur lors de l'envoi du formulaire, réessayez plus tard.")
+          if (err.response) {
+            console.log( err.response.data,'error')
+          }else console.log(err);
+        })
+  }
+
   return (
     <section id="Investorform" className={styles.form}>
       <div className={styles.innerWrapper}>
@@ -45,7 +86,7 @@ const Investorform = () => {
             <Trans>Formulaire</Trans>{" "}
           </h5>
         </div>
-        <form>
+        <form onSubmit={e => sendForm(e)}>
           <label className={styles.odd}>
             <Trans>nom complet</Trans>*
             <input type="text" required placeholder={t("nom complet")}
@@ -82,11 +123,11 @@ const Investorform = () => {
           </label>
 
           <label>
-            <Trans>provenance</Trans>
+            <Trans>provenance</Trans>*
             <Select
                 onChange={e => setSource(e.value)}
                 options={providenceOptions}
-                placeholder={t("salary")}
+                placeholder={t("Salaires")}
                 className="selectContainer"
                 classNamePrefix="select"
             />
@@ -123,6 +164,7 @@ const Investorform = () => {
           <button>
             <Trans>Envoyer la demande</Trans>
           </button>
+          {errorMessage?<span><Trans>{errorMessage}</Trans></span>:null}
         </form>
       </div>
     </section>

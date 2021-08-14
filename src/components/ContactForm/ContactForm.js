@@ -15,23 +15,21 @@ const Contactform = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage,setErrorMessage] = useState('');
 
   const { t } = useTranslation();
-
-  const languagesOptions = [
-    { value: t("Français"), label: t("Français") },
-    { value: t("Anglais"), label: t("Anglais") },
-  ];
 
   const sendForm = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     const body = `
     from: /contact
-    Name: ${name}\n
-    Company:${companyName?companyName:"n.a."}\n
-    E-mail:${email}\n
-    Phone:${phone?phone:"n.a."}\n\n
+    Name: ${name}
+    Company: ${companyName?companyName:"n.a."}
+    E-mail: ${email}
+    Phone: ${phone?phone:"n.a."}
+    
+    
     ${message}        
     `
     const data = {
@@ -40,18 +38,19 @@ const Contactform = () => {
       subject:`contact ${name}`,
       message: body
     };
-    /*axios.post(MAIL_SERVER_ROUTE,data)
+    axios.post(MAIL_SERVER_ROUTE,data)
         .then(res => {
           console.log(res.data,"success");
           setIsLoading(false)
+          window.location.href = '/confirmation';
         })
         .catch(err => {
           setIsLoading(false)
+          setErrorMessage("Erreur lors de l'envoi du formulaire, réessayez plus tard.")
           if (err.response) {
             console.log( err.response.data,'error')
           }else console.log(err);
-        })*/
-    console.log('send form',data)
+        })
   }
 
   return (
@@ -137,6 +136,7 @@ const Contactform = () => {
           <button>
             <Trans>Envoyer</Trans>
           </button>
+          {errorMessage?<span><Trans>{errorMessage}</Trans></span>:null}
         </form>
       </div>
     </section>

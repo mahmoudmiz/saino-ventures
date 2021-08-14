@@ -112,5 +112,6 @@
     "Pensions": "Retirement pay",
     "Héritage": "Inheritance",
     "Combinaison": "Combination",
-    "Autres": "Others"
+    "Autres": "Others",
+    "Erreur lors de l'envoi du formulaire, réessayez plus tard.": "Erreur lors de l'envoi du formulaire, réessayez plus tard."
 }
