@@ -25,25 +25,23 @@
     text-align: left;
     border-radius: 4px;
 
-    &::after {
-      content: url("../../images/chevron-down-black.svg");
-      position: absolute;
-      right: 16px;
-      top: 12px;
-      cursor: pointer;
-    }
-
     @media (min-width: $breakpointTablet) {
       color: white;
       padding: 0;
       border-radius: 0;
       background: transparent;
+    }
+  }
 
-      &::after {
-        content: url("../../images/chevron-down.svg");
-        right: 0px;
-        top: 2px;
-      }
+  img {
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    cursor: pointer;
+
+    @media (min-width: $breakpointTablet) {
+      right: 0px;
+      top: 8px;
     }
   }
 
@@ -94,9 +92,6 @@
 .whiteBackground {
   button {
     color: black;
-    &::after {
-      content: url("../../images/chevron-down-black.svg");
-    }
   }
 
   .languagesList {

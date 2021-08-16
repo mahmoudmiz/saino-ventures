@@ -135,7 +135,10 @@
 }
 .carouselItem {
   padding: 36px 24px 40px 27px;
+  width: 311px;
   position: relative;
+  background: white;
+  height: 100%;
   &::after {
     content: "";
     position: absolute;

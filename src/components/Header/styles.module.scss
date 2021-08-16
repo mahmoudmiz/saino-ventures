@@ -2,15 +2,16 @@
 
 header {
   position: relative;
-  background-image: url("../../images/header-bg-mobile.svg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../images/header-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   padding: 0 2rem;
   padding-top: 2rem;
+
   @media (min-width: $breakpointTablet) {
-    background-image: url("../../images/header-bg.svg");
     background-position: initial;
   }
 }
@@ -27,7 +28,7 @@ header {
 .learnMore {
   display: flex;
   position: absolute;
-  top: 91vh;
+  top: 88vh;
   cursor: pointer;
   .learnMoreButton {
     border-radius: 50%;
@@ -54,6 +55,7 @@ header {
   }
   @media (min-width: $breakpointTablet) {
     margin: 0 70px;
+    top: 91vh;
   }
 }
 

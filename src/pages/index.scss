@@ -35,12 +35,16 @@ main {
 
 // investments overrides
 #investment {
+  .carousel .slide {
+  }
   .carousel-root {
-    background: white;
     box-shadow: 0px 4px 60px rgb(0 0 0 / 15%);
-    li {
-      border: 1px solid #bababa;
-      box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+
+    li.slide {
+      // box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .slide.selected {
     }
   }
 
