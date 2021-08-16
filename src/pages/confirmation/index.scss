@@ -1,0 +1,9 @@
+.confirmationFooter {
+  position: absolute;
+  width: 100%;
+  bottom: initial;
+
+  @media (min-width: 1300px) {
+    bottom: 0;
+  }
+}

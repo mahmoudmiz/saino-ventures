@@ -8,11 +8,19 @@ import Footer from "../../components/Footer/Footer";
 
 //styles
 import "./index.scss";
+import {Helmet} from "react-helmet";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 // markup
 const InvestorformPage = () => {
+    const { t } = useTranslation();
   return (
     <main>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>{t("Investor form")+" | Saino Ventures"}</title>
+            <link rel="canonical" href="https://sainoventures.com" />
+        </Helmet>
       <Nav whiteBackground />
       <Investorform />
       <Footer />

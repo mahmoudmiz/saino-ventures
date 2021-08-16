@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import * as styles from "./styles.module.scss";
 
 // slider values
-const currentValue = 50000; //change the current value here
+const currentValue = 0; //change the current value here
 const step1 = 200000;
 const start = 0;
 const end = 1000000;
@@ -71,7 +71,7 @@ const Investment2 = () => {
           <div className={styles.sliderRange}>
             <span>0</span>
             <span
-              className={styles.sliderRangeFloating}
+              //className={styles.sliderRangeFloating}
               style={{
                 left: `${(step1 / end) * 100}%`,
                 transform: `translate(-${(step1 / end) * 100}%)`,

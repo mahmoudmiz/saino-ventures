@@ -13,6 +13,8 @@
 
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%;
 }
 
 main {
@@ -35,17 +37,8 @@ main {
 
 // investments overrides
 #investment {
-  .carousel .slide {
-  }
   .carousel-root {
     box-shadow: 0px 4px 60px rgb(0 0 0 / 15%);
-
-    li.slide {
-      // box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
-    }
-
-    .slide.selected {
-    }
   }
 
   .carousel.carousel-slider {

@@ -8,7 +8,8 @@ import * as styles from "./styles.module.scss";
 
 // assets
 //import Video_ILLUSTRATION from "../../images/video.mp4";
-import Video_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION_NEW.mp4";
+import Video_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION_04_mobile_02.mp4";
+
 // markup
 const Manifesto = () => {
   return (
@@ -35,7 +36,7 @@ const Manifesto = () => {
             type="video/mp4"
           />
 
-          <div className={styles.rightWrapper}>
+          <div /*className={styles.rightWrapper}*/>
             <div className={styles.manifestoBlock}>
               <h5>
                 <Trans>Manifesto</Trans>

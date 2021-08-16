@@ -7,14 +7,22 @@ import Confirmation from "../../components/Confirmation/Confirmation";
 import Footer from "../../components/Footer/Footer";
 //styles
 import "./index.scss";
+import { Helmet } from "react-helmet";
 
 // markup
 const ConfirmationPage = () => {
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{"Confirmation | Saino Ventures"}</title>
+        <link rel="canonical" href="https://sainoventures.com" />
+      </Helmet>
       <Nav whiteBackground />
       <Confirmation />
-      <Footer />
+      <div className="confirmationFooter">
+        <Footer />
+      </div>
     </main>
   );
 };
