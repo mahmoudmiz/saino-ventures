@@ -3,6 +3,7 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Select from "react-select";
 import axios from "axios";
 import { navigate } from "gatsby";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 //styles
 import * as styles from "./styles.module.scss";
@@ -156,7 +157,11 @@ const Contactform = () => {
             (*) <Trans>Champs obligatoires</Trans>
           </div>
           <button>
-            <Trans>Envoyer</Trans>
+            {isLoading ? (
+              <CircularProgress size={30} />
+            ) : (
+              <Trans>Envoyer</Trans>
+            )}
           </button>
           {errorMessage ? (
             <span className={styles.error}>

@@ -4,6 +4,7 @@ import axios from "axios";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { RECEPTION_EMAIL, MAIL_SERVER_ROUTE } from "../../utils";
 import { navigate } from "gatsby";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 //styles
 import * as styles from "./styles.module.scss";
@@ -185,7 +186,11 @@ const Investorform = () => {
             (*) <Trans>Champs obligatoires</Trans>
           </div>
           <button>
-            <Trans>Envoyer la demande</Trans>
+            {isLoading ? (
+              <CircularProgress size={30} />
+            ) : (
+              <Trans>Envoyer la demande</Trans>
+            )}
           </button>
           {errorMessage ? (
             <span className={styles.error}>

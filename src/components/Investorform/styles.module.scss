@@ -95,12 +95,14 @@ form {
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
     background: transparent;
     cursor: pointer;
     border: 2px solid $purple;
     border-radius: 8px;
-    padding: 17px;
-    text-align: center;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -152,7 +154,6 @@ form {
     flex-wrap: wrap;
 
     button {
-      display: block;
       width: 100%;
       margin: 80px auto 0 auto;
       max-width: 307px;
