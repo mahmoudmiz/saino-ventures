@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 //components
@@ -17,14 +17,14 @@ import "./index.scss";
 
 // markup
 const IndexPage = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <main>
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>{"Saino Ventures | "+t('Blockchain Investment Fund')}</title>
-            <link rel="canonical" href="https://sainoventures.com" />
-        </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{"Saino Ventures | " + t("Blockchain Investment Fund")}</title>
+        <link rel="canonical" href="https://sainoventures.com" />
+      </Helmet>
       <Header />
       <Insight />
       <Manifesto />
