@@ -231,15 +231,15 @@
       text-transform: uppercase;
       margin-right: 28px;
       text-decoration: none;
-
       position: relative;
+
       &::after {
         content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
         width: 100%;
-        height: 0.6px;
+        height: 0.7px;
         opacity: 0;
         background-color: white;
         transform: scaleX(0);
@@ -271,9 +271,8 @@
     .navMenu {
       a {
         color: black;
-        &:hover,
-        &:active {
-          border-bottom: 1px solid $black1;
+        &::after {
+          background-color: black;
         }
       }
     }
@@ -283,10 +282,6 @@
     .navMenu {
       a {
         color: white;
-        &:hover,
-        &:active {
-          border-bottom: 1px solid $white1;
-        }
       }
     }
   }
