@@ -31,7 +31,7 @@ const Manifesto = () => {
             loop
             autoPlay
             muted
-            playsinline
+            playsInline
             src={Video_ILLUSTRATION}
             type="video/mp4"
           />
