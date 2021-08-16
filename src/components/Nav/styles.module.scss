@@ -282,6 +282,9 @@
     .navMenu {
       a {
         color: white;
+        &::after {
+          background-color: white;
+        }
       }
     }
   }
