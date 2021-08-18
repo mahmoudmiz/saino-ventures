@@ -11,9 +11,9 @@ export const useIsAllowed = () => {
       const difference = new Date().getTime() - new Date(lastSeen).getTime();
       const minutesDifference = Math.floor(difference / 1000 / 60);
 
-      if (minutesDifference > 0) {
+      if (minutesDifference > 60) {
         setIsAllowed(true);
-        // window.localStorage.setItem("lastSeen", new Date());
+        window.localStorage.setItem("lastSeen", new Date());
       }
     } else {
       window.localStorage.setItem("lastSeen", new Date());
