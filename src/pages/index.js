@@ -11,6 +11,8 @@ import Manifesto from "../components/Manifesto/Manifesto";
 import Investment from "../components/Investment/Investment";
 import Investment2 from "../components/Investment2/Investment2";
 import Team from "../components/Team/Team";
+import { useIsAllowed } from "../utils";
+import INTROVIDEO from "./../images/LOADER.mp4";
 
 //styles
 import "./index.scss";
@@ -18,6 +20,12 @@ import "./index.scss";
 // markup
 const IndexPage = () => {
   const { t } = useTranslation();
+  const [showIntro, setShowIntro] = React.useState(true);
+  const isAllowed = useIsAllowed();
+
+  const handleIntro = () => {
+    setShowIntro(false);
+  };
   return (
     <main>
       <Helmet>
@@ -25,13 +33,27 @@ const IndexPage = () => {
         <title>{"Saino Ventures | " + t("Blockchain Investment Fund")}</title>
         <link rel="canonical" href="https://sainoventures.com" />
       </Helmet>
-      <Header />
-      <Insight />
-      <Manifesto />
-      <Investment />
-      <Investment2 />
-      <Team />
-      <Footer />
+      {showIntro && isAllowed ? (
+        <div className="intro">
+          <video
+            autoPlay
+            muted
+            onEnded={() => handleIntro()}
+            src={INTROVIDEO}
+            type="video/mp4"
+          />
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Insight />
+          <Manifesto />
+          <Investment />
+          <Investment2 />
+          <Team />
+          <Footer />
+        </>
+      )}
     </main>
   );
 };
