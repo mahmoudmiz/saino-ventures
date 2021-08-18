@@ -17,6 +17,7 @@ export const useIsAllowed = () => {
       }
     } else {
       window.localStorage.setItem("lastSeen", new Date());
+      setIsAllowed(true);
     }
   }, []);
 
