@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Trans } from "gatsby-plugin-react-i18next";
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 //styles
 import * as styles from "./styles.module.scss";
 
@@ -12,6 +12,8 @@ import Video_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION_04_mobile_02.mp4
 
 // markup
 const Manifesto = () => {
+  const matches = useMediaQuery("(max-width:500px)");
+
   return (
     <section id="manifesto" className={styles.manifesto}>
       <div className={styles.innerWrapper}>
@@ -81,34 +83,26 @@ const Manifesto = () => {
         </div>
         {/* only mobile*/}
         <div className={styles.mobileContainer}>
-          <Carousel selectedItem={0} showThumbs={false}>
-            <div className={styles.carouselItem}>
-              <h3 style={{ fontSize: "8px", marginBottom: "0" }}>
-                <Trans>DLT</Trans>
-              </h3>
-              <p style={{ fontSize: "9px", lineHeight: "14px" }}>
-                <Trans>def 1</Trans>
-              </p>
-            </div>
-            {/*
-            <div className={styles.carouselItem}>
-              <h3>DLT</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </p>
-            </div>
-            <div className={styles.carouselItem}>
-              <h3>DLT</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </p>
-            </div>
-            */}
-          </Carousel>
+          <CarouselProvider
+            naturalSlideWidth={200}
+            naturalSlideHeight={70}
+            totalSlides={1}
+            visibleSlides={1}
+          >
+            <Slider className="sliderContainer">
+              <Slide index={0} className="slide-1">
+                <div className={styles.carouselItem}>
+                  <h3 style={{ fontSize: "8px", marginBottom: "0" }}>
+                    <Trans>DLT</Trans>
+                  </h3>
+                  <p style={{ fontSize: "9px", lineHeight: "14px" }}>
+                    <Trans>def 1</Trans>
+                  </p>
+                </div>
+              </Slide>
+            </Slider>
+            {/* <DotGroup className="dots" /> */}
+          </CarouselProvider>
         </div>
       </div>
     </section>

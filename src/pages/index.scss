@@ -48,36 +48,61 @@ main {
   }
 }
 
-// dot styles overrides
-.carousel .control-dots .dot {
-  width: 8px;
-  height: 8px;
-  background: #000000;
-  opacity: 1;
+// slider overrides
+#investment,
+#insight {
+  .sliderContainer {
+    overflow: inherit;
+    .slide-1,
+    .slide-2 {
+      margin-right: 1.5%;
+      width: 32.3% !important;
+    }
+
+    .slide-3 {
+      width: 32.3% !important;
+    }
+  }
+  .dots {
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: black;
+      border: none;
+    }
+
+    .carousel__dot--selected {
+      border: 1px solid black;
+      background: white;
+    }
+  }
 }
 
-// selected dot styles overrides
-.carousel .control-dots .dot.selected {
-  border: 1px solid #000000;
-  background: white;
-}
-
-// investments overrides
-#investment {
-  .carousel-root {
-    box-shadow: 0px 4px 60px rgb(0 0 0 / 15%);
+#manifesto {
+  .sliderContainer {
+    overflow: inherit;
   }
 
-  .carousel.carousel-slider {
-    overflow: unset;
-  }
+  .dots {
+    text-align: center;
 
-  .control-dots {
-    bottom: -70px;
-  }
-}
+    button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: grey;
+      border: none;
+    }
 
-// hide the count of the slides for all sliders
-.carousel .carousel-status {
-  display: none;
+    .carousel__dot--selected {
+      border: 1px solid black;
+      background: white;
+    }
+  }
 }

@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Fade from "@material-ui/core/Fade";
 import Collapse from "@material-ui/core/Collapse";
 import Grow from "@material-ui/core/Grow";
 import { Trans } from "gatsby-plugin-react-i18next";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 //styles
 import * as styles from "./styles.module.scss";
@@ -64,6 +65,8 @@ const ListItem = ({ children, title }) => {
 
 // markup
 const Investment = () => {
+  const matches = useMediaQuery("(max-width:500px)");
+
   return (
     <section id="investment" className={styles.investment}>
       <div className={styles.mainInnerWrapper}>
@@ -78,47 +81,61 @@ const Investment = () => {
 
         {/*   mobile */}
         <div className={styles.carouselContainer}>
-          <Carousel selectedItem={0} showThumbs={false}>
-            <div className={styles.carouselItem}>
-              <h5>
-                <Trans>Seed</Trans>
-              </h5>
-              <h3>
-                <Trans>
-                  Highest time perspective & risk highest potential reward
-                </Trans>{" "}
-                <br />
-                <Trans>Highest reward</Trans>
-              </h3>
-              <p>
-                <Trans>text seed</Trans>
-              </p>
-            </div>
-            <div className={styles.carouselItem}>
-              <h5>
-                <Trans>Private Sales</Trans>
-              </h5>
-              <h3>
-                <Trans>High time perspective & high risk</Trans> <br />
-                <Trans>High potential reward</Trans>
-              </h3>
-              <p>
-                <Trans>Private sale text</Trans>
-              </p>
-            </div>
-            <div className={styles.carouselItem}>
-              <h5>
-                <Trans>DEX & CEX</Trans>
-              </h5>
-              <h3>
-                <Trans>Medium time prespective & medium risk</Trans> <br />
-                <Trans>Medium potential reward</Trans>
-              </h3>
-              <p>
-                <Trans>DEXCEX text</Trans>
-              </p>
-            </div>
-          </Carousel>
+          <CarouselProvider
+            naturalSlideWidth={250}
+            naturalSlideHeight={350}
+            totalSlides={3}
+            visibleSlides={matches ? 1 : 2}
+          >
+            <Slider className="sliderContainer">
+              <Slide index={0} className="slide-1">
+                <div className={styles.carouselItem}>
+                  <h5>
+                    <Trans>Seed</Trans>
+                  </h5>
+                  <h3>
+                    <Trans>
+                      Highest time perspective & risk highest potential reward
+                    </Trans>{" "}
+                    <br />
+                    <Trans>Highest reward</Trans>
+                  </h3>
+                  <p>
+                    <Trans>text seed</Trans>
+                  </p>
+                </div>
+              </Slide>
+              <Slide index={1} className="slide-2">
+                <div className={styles.carouselItem}>
+                  <h5>
+                    <Trans>Private Sales</Trans>
+                  </h5>
+                  <h3>
+                    <Trans>High time perspective & high risk</Trans> <br />
+                    <Trans>High potential reward</Trans>
+                  </h3>
+                  <p>
+                    <Trans>Private sale text</Trans>
+                  </p>
+                </div>
+              </Slide>
+              <Slide index={2} className="slide-3">
+                <div className={styles.carouselItem}>
+                  <h5>
+                    <Trans>DEX & CEX</Trans>
+                  </h5>
+                  <h3>
+                    <Trans>Medium time prespective & medium risk</Trans> <br />
+                    <Trans>Medium potential reward</Trans>
+                  </h3>
+                  <p>
+                    <Trans>DEXCEX text</Trans>
+                  </p>
+                </div>
+              </Slide>
+            </Slider>
+            <DotGroup className="dots" />
+          </CarouselProvider>
         </div>
 
         {/*   desktop */}

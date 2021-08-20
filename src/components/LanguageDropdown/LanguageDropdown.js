@@ -1,5 +1,4 @@
 import * as React from "react";
-import { isMobile } from "react-device-detect";
 import Collapse from "@material-ui/core/Collapse";
 import Fade from "@material-ui/core/Fade";
 import { Trans, useI18next } from "gatsby-plugin-react-i18next";
@@ -28,8 +27,13 @@ const LanguageDropdown = ({ whiteBackground }) => {
           onClick={() => setShowOptions((prev) => !prev)}
         >
           <button>
-            {isMobile ? <Trans>language</Trans> : <Trans>languageMobile</Trans>}
+            {matches ? (
+              <Trans>languageDesktop</Trans>
+            ) : (
+              <Trans>languageMobile</Trans>
+            )}
           </button>
+
           <img
             src={
               whiteBackground
