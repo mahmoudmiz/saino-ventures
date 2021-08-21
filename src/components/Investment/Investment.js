@@ -65,7 +65,9 @@ const ListItem = ({ children, title }) => {
 
 // markup
 const Investment = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:540px)");
+  const matchesSmall = useMediaQuery("(max-width:630px)");
+  const matchesVeySmall = useMediaQuery("(max-width:360px)");
 
   return (
     <section id="investment" className={styles.investment}>
@@ -82,8 +84,10 @@ const Investment = () => {
         {/*   mobile */}
         <div className={styles.carouselContainer}>
           <CarouselProvider
-            naturalSlideWidth={250}
-            naturalSlideHeight={350}
+            naturalSlideWidth={matches ? (matchesVeySmall ? 300 : 380) : 230}
+            naturalSlideHeight={
+              matchesSmall ? (matchesVeySmall ? 600 : 500) : 350
+            }
             totalSlides={3}
             visibleSlides={matches ? 1 : 2}
           >

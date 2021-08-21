@@ -47,6 +47,7 @@
 
 .carouselItem {
   text-align: left;
+  padding: 0 10px;
 
   h5 {
     color: $purple;
@@ -69,11 +70,11 @@
     font-weight: normal;
     font-size: 13px;
     line-height: 22px;
-    margin-bottom: 3rem;
   }
 
   @media (min-width: $breakpointTablet) {
     font-size: 12px;
+    padding: 0px;
 
     h5 {
       font-size: 12px;

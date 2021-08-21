@@ -12,7 +12,7 @@ import Video_ILLUSTRATION from "../../images/SAINO_ILLUSTRATION_04_mobile_02.mp4
 
 // markup
 const Manifesto = () => {
-  const matches = useMediaQuery("(max-width:500px)");
+  const matchesSmall = useMediaQuery("(max-width:460px)");
 
   return (
     <section id="manifesto" className={styles.manifesto}>
@@ -84,8 +84,8 @@ const Manifesto = () => {
         {/* only mobile*/}
         <div className={styles.mobileContainer}>
           <CarouselProvider
-            naturalSlideWidth={200}
-            naturalSlideHeight={70}
+            naturalSlideWidth={matchesSmall ? 400 : 600}
+            naturalSlideHeight={matchesSmall ? 150 : 100}
             totalSlides={1}
             visibleSlides={1}
           >

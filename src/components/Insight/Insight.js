@@ -9,7 +9,8 @@ import * as styles from "./styles.module.scss";
 
 // markup
 const Insight = () => {
-  const matches = useMediaQuery("(max-width:500px)");
+  const matches = useMediaQuery("(max-width:590px)");
+  const matchesSmall = useMediaQuery("(max-width:360px)");
 
   return (
     <section id="insight" className={styles.insight}>
@@ -25,8 +26,8 @@ const Insight = () => {
         {/* mobile*/}
         <div className={styles.carouselWrapper}>
           <CarouselProvider
-            naturalSlideWidth={250}
-            naturalSlideHeight={matches ? 90 : 160}
+            naturalSlideWidth={matches ? 500 : 400}
+            naturalSlideHeight={matches ? (matchesSmall ? 250 : 150) : 230}
             totalSlides={3}
             visibleSlides={matches ? 1 : 2}
           >

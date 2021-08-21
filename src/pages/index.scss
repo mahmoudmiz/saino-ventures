@@ -49,8 +49,7 @@ main {
 }
 
 // slider overrides
-#investment,
-#insight {
+#investment {
   .sliderContainer {
     overflow: inherit;
     .slide-1,
@@ -83,13 +82,31 @@ main {
   }
 }
 
-#manifesto {
-  .sliderContainer {
-    overflow: inherit;
-  }
-
+#insight {
   .dots {
     text-align: center;
+    position: relative;
+    top: 1rem;
+    button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: black;
+      border: none;
+    }
+
+    .carousel__dot--selected {
+      border: 1px solid black;
+      background: white;
+    }
+  }
+}
+
+#manifesto {
+  .dots {
+    text-align: center;
+    margin-top: 1rem;
 
     button {
       width: 8px;
