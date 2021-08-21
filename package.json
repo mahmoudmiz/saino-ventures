@@ -38,6 +38,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.3",
+    "react-preloading-screen": "^1.0.2",
     "react-scroll": "^1.8.3",
     "react-select": "^4.3.1",
     "sass": "^1.35.2"

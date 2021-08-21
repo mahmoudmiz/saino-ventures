@@ -65,7 +65,7 @@ const ListItem = ({ children, title }) => {
 
 // markup
 const Investment = () => {
-  const matches = useMediaQuery("(max-width:500px)");
+  const matches = useMediaQuery("(max-width:600px)");
 
   return (
     <section id="investment" className={styles.investment}>

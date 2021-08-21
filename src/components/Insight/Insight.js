@@ -26,7 +26,7 @@ const Insight = () => {
         <div className={styles.carouselWrapper}>
           <CarouselProvider
             naturalSlideWidth={250}
-            naturalSlideHeight={100}
+            naturalSlideHeight={matches ? 90 : 160}
             totalSlides={3}
             visibleSlides={matches ? 1 : 2}
           >
