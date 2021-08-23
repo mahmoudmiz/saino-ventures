@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.termsofuse {
+  padding: 191px 2rem 80px 2rem;
+}
+
+.innerWrapper {
+  position: relative;
+  max-width: $maxwidth;
+  margin: 0 auto;
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+  }
+
+  @media (min-width: $breakpointTablet) {
+    padding: 0;
+    &::after {
+      top: 50px;
+      font-size: 200px;
+      left: 30%;
+    }
+  }
+}
+
+p {
+  margin-top: 20px;
+}
