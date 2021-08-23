@@ -139,6 +139,9 @@ main {
     width: 80px;
     height: 80px;
     background-color: #1d1d1d;
+    border: 2px solid #726bb9;
+    padding: 45px;
+    border-radius: 8px;
     margin: 0 auto;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
     position: absolute;
@@ -147,7 +150,7 @@ main {
     background-image: url("./../images/Vector.png");
     background-repeat: no-repeat;
     background-position: center;
-    //box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
     top: 50%;
     margin-top: -75px;
   }
