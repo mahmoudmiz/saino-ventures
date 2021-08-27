@@ -1,4 +1,8 @@
 import * as React from "react";
+import { Trans } from "gatsby-plugin-react-i18next";
+import { Link } from "react-scroll";
+import { navigate } from "gatsby";
+import { animateScroll } from "react-scroll";
 
 //components
 import logo from "../../images/logo.svg";
@@ -22,43 +26,39 @@ const Footer = () => {
           className={styles.footerLogo}
         />
 
-        <div className={styles.footerSocials}>
+        {/*<div className={styles.footerSocials}>
           <img src={facebookIcon} alt="facebook" />
           <img src={twitterIcon} alt="twitter" />
           <img src={instgramIcon} alt="instgram" />
           <img src={linkedIcon} alt="linkedin" />
-        </div>
+        </div>*/}
         <div className={styles.footerList}>
           <div className={styles.footerBlock}>
-            <h5>Lorem ipsum </h5>
+            <h5><Trans>Company</Trans></h5>
             <div className={styles.footerTile}>
-              <p>Lorem ipsum Copy</p>
-              <p>LOREM IPSUM IPSUM </p>
-              <p>DOLOR LOREM</p>
-              <p>LOREM Copy</p>
-              <p>DOLOR LOREM IPSUM</p>
+
+              <p><Trans>Manifesto</Trans></p>
+              <p><Trans>Investissements</Trans></p>
+              <p><Trans>rising fund</Trans></p>
+              <p><Trans>team nav</Trans></p>
             </div>
           </div>
           {/* hidden on mobile */}
           <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
-            <h5>Lorem ipsum </h5>
+            <h5>Support</h5>
             <div className={styles.footerTile}>
-              <p>Lorem ipsum Copy</p>
-              <p>LOREM IPSUM IPSUM </p>
-              <p>DOLOR LOREM</p>
-              <p>LOREM Copy</p>
-              <p>DOLOR LOREM IPSUM</p>
+              <p><Trans>Contact</Trans></p>
+              <p><Trans>Je souhaite être early investor</Trans></p>
+              <p><Trans>General terms and conditions of use</Trans></p>
+              <p><Trans>Privacy declaration</Trans></p>
             </div>
           </div>
           {/* hidden on mobile */}
           <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
-            <h5>Lorem ipsum </h5>
+            <h5><Trans>Siège social</Trans></h5>
             <div className={styles.footerTile}>
-              <p>Lorem ipsum Copy</p>
-              <p>LOREM IPSUM IPSUM </p>
-              <p>DOLOR LOREM</p>
-              <p>LOREM Copy</p>
-              <p>DOLOR LOREM IPSUM</p>
+              <p>Tortola VG 1110, British Virgin Islands</p>
+              <p>Email: contact@sainoventures.com</p>
             </div>
           </div>
         </div>
