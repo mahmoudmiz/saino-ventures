@@ -79,8 +79,11 @@ footer {
       line-height: 24px;
     }
   }
-  &:nth-of-type(1) {
-    margin-left: 1.5rem;
+
+  @media (min-width: $breakpointTablet) {
+    &:nth-of-type(1) {
+      margin-left: 1.5rem;
+    }
   }
 }
 .footerTile {
