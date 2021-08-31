@@ -34,28 +34,47 @@ const Footer = () => {
         </div>*/}
         <div className={styles.footerList}>
           <div className={styles.footerBlock}>
-            <h5><Trans>Company</Trans></h5>
+            <h5>
+              <Trans>Company</Trans>
+            </h5>
             <div className={styles.footerTile}>
-
-              <p><Trans>Manifesto</Trans></p>
-              <p><Trans>Investissements</Trans></p>
-              <p><Trans>rising fund</Trans></p>
-              <p><Trans>team nav</Trans></p>
+              <p>
+                <Trans>Manifesto</Trans>
+              </p>
+              <p>
+                <Trans>Investissements</Trans>
+              </p>
+              <p>
+                <Trans>rising fund</Trans>
+              </p>
+              <p>
+                <Trans>team nav</Trans>
+              </p>
             </div>
           </div>
           {/* hidden on mobile */}
-          <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
+          <div className={`${styles.footerBlock}`}>
             <h5>Support</h5>
             <div className={styles.footerTile}>
-              <p><Trans>Contact</Trans></p>
-              <p><Trans>Je souhaite être early investor</Trans></p>
-              <p><Trans>General terms and conditions of use</Trans></p>
-              <p><Trans>Privacy declaration</Trans></p>
+              <p>
+                <Trans>Contact</Trans>
+              </p>
+              <p>
+                <Trans>Je souhaite être early investor</Trans>
+              </p>
+              <p>
+                <Trans>General terms and conditions of use</Trans>
+              </p>
+              <p>
+                <Trans>Privacy declaration</Trans>
+              </p>
             </div>
           </div>
           {/* hidden on mobile */}
-          <div className={`${styles.footerBlock} ${styles.mobileOnly}`}>
-            <h5><Trans>Siège social</Trans></h5>
+          <div className={`${styles.footerBlock}`}>
+            <h5>
+              <Trans>Siège social</Trans>
+            </h5>
             <div className={styles.footerTile}>
               <p>Tortola VG 1110, British Virgin Islands</p>
               <p>Email: contact@sainoventures.com</p>
